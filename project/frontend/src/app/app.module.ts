@@ -21,7 +21,6 @@ import { ExploraComponent } from './homepage/home/explora/explora.component';
 import { SafariComponent } from './homepage/home/safari/safari.component';
 import { AboutComponent } from './homepage/home/about/about.component';
 import { PackageComponent } from './homepage/home/package/package.component';
-import { AnimationsComponent } from './homepage/animations/animations.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ComponentsComponent } from './admin/components/components.component';
@@ -32,12 +31,10 @@ import { TouristHomeComponent } from './tourist-home/tourist-home.component';
 import { LogedInNavComponent } from './tourist-home/core/logedinNav/logedinnav.component';
 import { HotelAddComponent } from './admin/components/sidebar/hotel/hotel-add/hotel-add.component';
 import { HotelEditComponent } from './admin/components/sidebar/hotel/hotel-edit/hotel-edit.component';
-import { HotelDeleteComponent } from './admin/components/sidebar/Hotel/hotel-delete/hotel-delete.component';
 import { HotelComponent } from './admin/components/sidebar/hotel/hotel.component';
 import { SafariAgencyComponent } from './admin/components/sidebar/safari-agency/safari-agency.component';
 import { AgencyAddComponent } from './admin/components/sidebar/safari-agency/agency-add/agency-add.component';
 import { AgencyEditComponent } from './admin/components/sidebar/safari-agency/agency-edit/agency-edit.component';
-import { AgencyDeleteComponent } from './admin/components/sidebar/safari-agency/agency-delete/agency-delete.component';
 import { TouristComponent } from './admin/components/sidebar/tourist/tourist.component';
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
 import { TouristEditComponent } from './admin/components/sidebar/tourist/tourist-edit/tourist-edit.component';
@@ -65,7 +62,6 @@ export function tokenGetter() {
     SafariComponent,
     AboutComponent,
     PackageComponent,
-    AnimationsComponent,
     AdminComponent,
     DashboardComponent,
     ComponentsComponent,
@@ -76,12 +72,10 @@ export function tokenGetter() {
     LogedInNavComponent,
     HotelAddComponent,
     HotelEditComponent,
-    HotelDeleteComponent,
     HotelComponent,
     SafariAgencyComponent,
     AgencyAddComponent,
     AgencyEditComponent,
-    AgencyDeleteComponent,
     TouristComponent,
     TouristAddComponent,
     TouristEditComponent,
