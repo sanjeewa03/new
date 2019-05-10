@@ -1,0 +1,30 @@
+<body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 100%; height: 200%; background-position: center; background-repeat: no-repeat; background-size: cover; opacity:0.2px;">
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="inactive undeLineHover">Sign In</h2>
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+  <input type="text" #username="ngModel" [(ngModel)]="userSigninService.selectedUser.username" name="username" placeholder="User Name"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+  <div *ngIf="signUpForm.submitted && !username.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+  <input type="password" #password="ngModel" [(ngModel)]="userSigninService.selectedUser.password" name="password" placeholder="Password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+  <div *ngIf="signUpForm.submitted && password.errors">
+    <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+  </div>
+  <input type="submit" value="Sign In">
+</form>
+<div class="success" *ngIf="showSucessMessage">
+  Saved successfully
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>
+</div>
+</div>

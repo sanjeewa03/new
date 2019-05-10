@@ -1,0 +1,44 @@
+<body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 100%;height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; ">
+  <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="inactive undeLineHover">Sign Up</h2>
+
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+  <input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.username" name="username" placeholder="User Name"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+  <div *ngIf="signUpForm.submitted && !username.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+  <input type="text" #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName" name="firstName" placeholder="First Name"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+  <div *ngIf="signUpForm.submitted && !firstName.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+  <input type="text" #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName" name="lastName" placeholder="Last Name"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
+  <div *ngIf="signUpForm.submitted && !lastName.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+
+  <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+  <div *ngIf="signUpForm.submitted && password.errors">
+    <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+  </div>
+  <input type="submit" value="Sign Up">
+</form>
+
+<!-- Success message -->
+<div class="success" *ngIf="showSucessMessage">
+  Saved successfully
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>
+<router-outlet></router-outlet>
+</div>
+</div>
+</body>

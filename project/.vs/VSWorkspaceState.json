@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\frontend",
+    "\\frontend\\src",
+    "\\frontend\\src\\app",
+    "\\frontend\\src\\app\\admin",
+    "\\frontend\\src\\app\\auth",
+    "\\frontend\\src\\app\\user",
+    "\\frontend\\src\\app\\user\\sign-in",
+    "\\frontend\\src\\app\\user\\sign-up"
+  ],
+  "SelectedNode": "\\frontend\\src\\app\\admin\\admin",
+  "PreviewInSolutionExplorer": false
+}
