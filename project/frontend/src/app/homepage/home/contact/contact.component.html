@@ -40,7 +40,7 @@
 	
 			<!-- starting of contact form -->
 			<div class="col-md-6 aos-init aos-animate" data-aos="fade-right">
-			  <form action="contact.php" method="POST" id="cform">
+			  <form #contactForm="ngForm" (ngSubmit)="contactForm.valid && onSubmit(contactForm)">
 				<div class="form-group">
 				  <div class="input-group mb-3">
 					<div class="input-group-prepend">
@@ -49,7 +49,7 @@
 					  </span>
 					</div>
 					
-					<input type="text" class="form-control" name="inputName" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" required="">
+					<input type="text" class="form-control" name="name" [(ngModel)]="messageService.selectedMessage.name" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" required="true">
 				  </div>
 				</div>
 				<div class="form-group">
@@ -60,7 +60,7 @@
 						
 					  </span>
 					</div>
-					<input type="text" class="form-control" name="inputEmail" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required="">
+					<input type="text" class="form-control" name="email" [(ngModel)]="messageService.selectedMessage.email"  placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required="">
 				  </div>
 				</div>
 				<div class="form-group">
@@ -71,13 +71,13 @@
 						
 					  </span>
 					</div>
-					<input type="text" class="form-control" name="inputPhone" placeholder="Phone Number" aria-label="Username" aria-describedby="basic-addon1" required="">
+					<input type="text" class="form-control" name="tpNo" [(ngModel)]="messageService.selectedMessage.tpNo"  placeholder="Phone Number" aria-label="Username" aria-describedby="basic-addon1" required="">
 				  </div>
 				</div>
 	
 				<div class="form-group">
 	
-				  <textarea class="form-control" name="inputComment" id="exampleFormControlTextarea1" placeholder="Tell About Your Problem" rows="5" required=""></textarea>
+				  <textarea class="form-control" name="message"  [(ngModel)]="messageService.selectedMessage.message" id="exampleFormControlTextarea1" placeholder="Tell About Your Problem" rows="5" required=""></textarea>
 				</div>
 	
 				<button type="submit" class="btn contact_btn">Submit</button>

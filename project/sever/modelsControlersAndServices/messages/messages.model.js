@@ -6,7 +6,7 @@ const schema = new Schema({
     email: { type: String, unique: false, required: true },
     telNo: { type: Number, unique: false, required: false },
 	message:{ type: String, unique: false, required: false },
-	read:{ type: Boolean, unique: false, required: true }
+	read:{ type: Boolean, unique: false, required: true, default:false }
 });
 
 schema.set('toJSON', { virtuals: true });
