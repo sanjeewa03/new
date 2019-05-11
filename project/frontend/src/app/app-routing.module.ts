@@ -12,6 +12,9 @@ import { TouristHomeComponent } from './tourist-home/tourist-home.component';
 import { HotelComponent } from './admin/components/sidebar/hotel/hotel.component';
 import { SafariAgencyComponent } from './admin/components/sidebar/safari-agency/safari-agency.component';
 import { TouristComponent } from './admin/components/sidebar/tourist/tourist.component';
+import { HotelAddComponent } from './admin/components/sidebar/hotel/hotel-add/hotel-add.component';
+import { AgencyAddComponent } from './admin/components/sidebar/safari-agency/agency-add/agency-add.component';
+import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
 
 
 
@@ -27,17 +30,32 @@ const routes: Routes = [
     path: 'signin', component: UserComponent,canActivate: [SessionGuard],
     children: [{path: '', component: SignInComponent}]
   },
+  //admin routes
   {
     path: 'admin', component: AdminComponent,
     canActivate: [RoleGuard],
     data: { 
     expectedRole: 'Admin'
     } ,
-    children: [{ path: '', component: DashboardComponent ,
+
+    //admin dashboard routes
+    children: [{ path: '', component: DashboardComponent ,canActivate: [RoleGuard],data: {expectedRole: 'Admin'},
+    
       children: [
-      {path:'hotel', component: HotelComponent},
-      {path:'safari-agency', component: SafariAgencyComponent},
-      {path:'tourist', component: TouristComponent}
+
+      //admin dashboard sidebar hotel routes
+      {path:'hotel', component: HotelComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'hotel/add', component: HotelAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
+      //admin dashboard sidebar safari routes
+      {path:'safari-agency', component: SafariAgencyComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'safari-agency/add', component: AgencyAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
+      //admin dashboard sidebar tourist routes
+      {path:'tourist', component: TouristComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'tourist/add', component: TouristAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
+
       ]}]
    },
   {
