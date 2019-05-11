@@ -33,7 +33,12 @@ const routes: Routes = [
     data: { 
     expectedRole: 'Admin'
     } ,
-    children: [{ path: '', component: DashboardComponent }]
+    children: [{ path: '', component: DashboardComponent ,
+      children: [
+      {path:'hotel', component: HotelComponent},
+      {path:'safari-agency', component: SafariAgencyComponent},
+      {path:'tourist', component: TouristComponent}
+      ]}]
    },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
@@ -43,40 +48,7 @@ const routes: Routes = [
     data: { 
     expectedRole: 'User'
     }
-  },
-  {
-    path: 'hotel', component: AdminComponent,
-    canActivate: [RoleGuard],
-    data: { 
-    expectedRole: 'Admin'
-    } ,
-    children: [
-      {path:'', component: HotelComponent}]
-   },
-   
-   
-   {
-    path: 'safari-agency', component: AdminComponent,
-    canActivate: [RoleGuard],
-    data: { 
-    expectedRole: 'Admin'
-    } ,
-    children: [
-      {path:'', component: SafariAgencyComponent}]
-   },
-   
-   {
-    path: 'tourist', component: AdminComponent,
-    canActivate: [RoleGuard],
-    data: { 
-    expectedRole: 'Admin'
-    } ,
-    children: [
-      {path:'', component: TouristComponent}]
-   }
-
-
-  
+  }  
 ];
 
 @NgModule({
