@@ -14,65 +14,43 @@
                     <div style="padding-top:30px" class="panel-body" >
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                       
+                        <form #addSafariForm="ngForm" (ngSubmit)="addSafariForm.valid && onSubmit(addSafariForm)">
                             
-                        <form id="loginform" class="form-horizontal" role="form">
-                                    
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                 <input id="login-username" type="text" class="form-control" name="id" value="" placeholder="Agency ID">                                        
+                                 <input id="login-username" type="text" [(ngModel)]="safariService.selectedSafari.safariID" class="form-control" name="id" value="" placeholder="Agency ID">                                        
                             </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group">
                                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input id="login-password" type="text" class="form-control" name="name" placeholder="Agency Name">
+                                <input id="login-password" type="text" [(ngModel)]="safariService.selectedSafari.safariName" class="form-control" name="name" placeholder="Agency Name">
                              </div>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input id="login-username" type="text" class="form-control" name="location" value="" placeholder="Location">                                        
+                                <input id="login-username" type="text"[(ngModel)]="safariService.selectedSafari.location"class="form-control" name="location" value="" placeholder="Location">                                        
                              </div>
                              <div style="margin-bottom: 25px" class="input-group">
                                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input id="login-username" type="text" class="form-control" name="email" value="" placeholder="Email">                                        
+                                <input id="login-username" type="text" [(ngModel)]="safariService.selectedSafari.email" class="form-control" name="email" value="" placeholder="Email">                                        
                              </div>
                              <div style="margin-bottom: 25px" class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                   <input id="login-username" type="text" class="form-control" name="fax" value="" placeholder="Fax">                                        
-                             </div>                        
+                                   <input id="login-username" type="text" [(ngModel)]="safariService.selectedSafari.fax" class="form-control" name="fax" value="" placeholder="Fax">                                        
+                             </div>
                              <div style="margin-bottom: 25px" class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    
-  
-                             <td class="colspan7">
-                                <select class="form-control">
-                                  <option value="form-control"placeholder="Availabel vehicles">
-                                   Vehicles
-                                  </option>
-                                  <option value="form-control">
-                                    1
-                                  </option>
-                                  <option value="form-control">
-                                   2
-                                  </option>
-                                  <option value="form-control">
-                                    3
-                                  </option>
-                                  <option value="form-control">
-                                   4
-                                  </option>
-                                  <option value="form-control">
-                                    more than 5
-                                  </option>
-                                </select>            
-                             
-                              </td>    
-                           </div>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                               <input id="login-username" type="text" [(ngModel)]="safariService.selectedSafari.noOfVehicles" class="form-control" name="noOfVehicle" value="" placeholder="No of vehicle">                                        
+                          </div>                        
+             
 
 
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
 
                                     <div class="col-sm-6 controls">
-                                      <a id="btn-submit" href="#" class="btn btn-success btn-lg">Submit</a>
+                                        <input type="submit" value="Submit">
+                                      
                                      
                                     </div>
                                 </div>
