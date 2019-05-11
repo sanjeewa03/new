@@ -22,6 +22,7 @@ const routes: Routes = [
   {
     path:'home', component: HomepageComponent,canActivate: [SessionGuard]
   },
+ 
   {
     path: 'signup', component: UserComponent,canActivate: [SessionGuard],
     children: [{path: '', component: SignUpComponent}]
