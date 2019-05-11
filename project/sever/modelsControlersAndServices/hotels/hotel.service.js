@@ -13,6 +13,7 @@ module.exports = {
 
 async function create(hotelParam) {
     console.log("inside hotel create func");
+	
     // validate
     if (await Hotel.findOne({ hotelID: hotelParam.hotelID })) {
         throw 'Username "' + hotelParam.hotelID + '" is already taken';

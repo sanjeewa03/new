@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { User } from './user.model';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable({
@@ -22,7 +22,7 @@ export class UserSigninService {
 
   postUser(user: User){
     console.log(user);
-    return this.http.post(environment.apiBaseUrl + '/authenticate', user);
+    return this.http.post(environment.apiBaseUrl + '/users/authenticate', user);
   }
 
 }

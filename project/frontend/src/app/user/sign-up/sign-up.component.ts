@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../../shared/user.service';
-import { UserSigninService } from '../../shared/user-signin.service';
+import { UserService } from '../../shared//user/user.service';
+import { UserSigninService } from '../../shared/user/user-signin.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../../shared/user.model';
+import { User } from '../../shared/user/user.model';
 
 @Component({
   selector: 'app-sign-up',
