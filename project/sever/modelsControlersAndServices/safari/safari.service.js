@@ -13,6 +13,7 @@ module.exports = {
 
 async function create(safariParam) {
     console.log("inside safari create func");
+	console.log(safariParam);
 	
     // validate
     if (await Safari.findOne({safariID: safariParam.safariID })) {

@@ -20,6 +20,6 @@ async function create(messageParam) {
 
     
 
-    // save user
+    // save message
     await message.save();
 }
