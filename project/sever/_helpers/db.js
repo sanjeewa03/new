@@ -5,5 +5,8 @@ mongoose.Promise = global.Promise;
 
 module.exports = {
     User: require('../modelsControlersAndServices/users/user.model'),
-	Hotel:require('../modelsControlersAndServices/hotels/hotel.model'),
+
+    Hotel:require('../modelsControlersAndServices/hotels/hotel.model'),
+    Safari:require('../modelsControlersAndServices/safari/safari.model')
+
 };
