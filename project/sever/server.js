@@ -16,7 +16,7 @@ app.use(jwt());
 // api routes
 app.use('/users', require('./modelsControlersAndServices/users/users.controller'));
 app.use('/hotel', require('./modelsControlersAndServices/hotels/hotel.controller'));
-app.use('/safari',require('./modelsControlersAndServices/safari/safari.model'));
+app.use('/safari',require('./modelsControlersAndServices/safari/safari.controller'));
 // global error handler
 app.use(errorHandler);
 
