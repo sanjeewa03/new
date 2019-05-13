@@ -13,7 +13,8 @@ function jwt() {
             '/users/register',
 			'/message/addmessage',
             '/hotel/addhotel',
-            '/safari/addagency'
+            '/safari/addagency',
+			'/tourist/addtourist'
         ]
     });
 }

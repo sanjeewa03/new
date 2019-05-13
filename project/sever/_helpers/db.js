@@ -7,6 +7,7 @@ module.exports = {
     User: require('../modelsControlersAndServices/users/user.model'),
 	Message:require('../modelsControlersAndServices/messages/messages.model'),
     Hotel:require('../modelsControlersAndServices/hotels/hotel.model'),
-    Safari:require('../modelsControlersAndServices/safari/safari.model')
+    Safari:require('../modelsControlersAndServices/safari/safari.model'),
+	Tourist:require('../modelsControlersAndServices/tourist/tourist.model')
 
 };

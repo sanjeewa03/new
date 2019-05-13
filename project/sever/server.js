@@ -17,7 +17,7 @@ app.use(jwt());
 app.use('/users', require('./modelsControlersAndServices/users/users.controller'));
 app.use('/hotel', require('./modelsControlersAndServices/hotels/hotel.controller'));
 
-
+app.use('/tourist', require('./modelsControlersAndServices/tourist/tourist.controller'));
 app.use('/message',require('./modelsControlersAndServices/messages/messages.controller'));
 
 app.use('/safari',require('./modelsControlersAndServices/safari/safari.controller'));
