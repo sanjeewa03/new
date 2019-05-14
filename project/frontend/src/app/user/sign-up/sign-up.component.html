@@ -1,9 +1,12 @@
 <body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 100%;height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; ">
   <div class="wrapper fadeInDown">
   <div id="formContent">
-    <h2 class="inactive undeLineHover">Sign Up</h2>
+    <div class="card card-1">
+    <h2 class="inactive undeLineHover">Registration Info</h2>
+  
 
 <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+  
   <input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.username" name="username" placeholder="User Name"
   required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
   <div *ngIf="signUpForm.submitted && !username.valid">
@@ -20,12 +23,48 @@
     <label class="validation-message">This field is required.</label>
   </div>
 
+  <input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="tel" placeholder="Email"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+  <div *ngIf="signUpForm.submitted && !email.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+
+  <input type="text" #phoneNumber="ngModel" [(ngModel)]="userService.selectedUser.phoneNumber" name="tel" placeholder="Mobile Number"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
+  <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+
+  <input type="text" #birthDate="ngModel" [(ngModel)]="userService.selectedUser.birthDate" name="tel" placeholder="MM/DD/YYYY"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">  
+  <div *ngIf="signUpForm.submitted && !birthDate.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+
+  <input type="text" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender" name="tel" placeholder="gender"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">  
+  <div *ngIf="signUpForm.submitted && !gender.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+  <input type="text" #nationality="ngModel" [(ngModel)]="userService.selectedUser.nationality" name="tel" placeholder="Natonality"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">  
+  <div *ngIf="signUpForm.submitted && !nationality.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+
   <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
   minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
   <div *ngIf="signUpForm.submitted && password.errors">
     <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
     <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
   </div>
+  <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Confirm Password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+  <div *ngIf="signUpForm.submitted && password.errors">
+    <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+  </div>
+
   <input type="submit" value="Sign Up">
 </form>
 
@@ -39,6 +78,7 @@
   {{serverErrorMessages}}
 </div>
 <router-outlet></router-outlet>
+</div>
 </div>
 </div>
 </body>
