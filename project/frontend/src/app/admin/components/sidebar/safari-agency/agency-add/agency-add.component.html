@@ -17,7 +17,7 @@
                         <form #addSafariForm="ngForm" (ngSubmit)="addSafariForm.valid && onSubmit(addSafariForm)">
                             
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-users"></i></span>
                                 <input id="agencyUserName" type="uname" [(ngModel)]="safariService.selectedSafari.agencyUserName" class="form-control" name="agencyUserName" value="" placeholder="User Name of Agency">                                        
                             </div>
                                 
@@ -27,12 +27,12 @@
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-book"></i></span>
                                 <input id="agencyAddress" type="add"[(ngModel)]="safariService.selectedSafari.agencyAddress"class="form-control" name="agencyAddress" value="" placeholder="Address">                                        
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-web"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-globe"></i></span>
                                 <input id="agencyWeb" type="web" [(ngModel)]="safariService.selectedSafari.agencyWeb" class="form-control" name="agencyWeb" value="" placeholder="Web Site">                                        
                             </div>
 
@@ -47,7 +47,7 @@
                             </div>
                              
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-car"></i></span>
                                 <input id="noOfVehicles" type="vehicle" [(ngModel)]="safariService.selectedSafari.noOfVehicles" class="form-control" name="noOfVehicles" value="" placeholder="No Of Vehicles">                                        
                             </div>
                                                
@@ -56,7 +56,7 @@
                                 <!-- Button -->
 
                                 <div class="col-sm-6 controls">
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" class="btn btn-primary btn-block" value="Submit">
                                       
                                 </div>
                             </div>

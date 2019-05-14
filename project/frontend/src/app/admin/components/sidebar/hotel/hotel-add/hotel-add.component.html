@@ -16,7 +16,7 @@
                         <form #addHotelForm="ngForm" (ngSubmit)="addHotelForm.valid && onSubmit(addHotelForm)">
                                     
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-users"></i></span>
                                 <input id="hotelUserName" type="uname"  [(ngModel)]="hotelService.selectedHotel.hotelUserName" class="form-control" name="hotelUserName" value="" placeholder="User Name of Hotel">                                        
                             </div>
                                 
@@ -26,12 +26,12 @@
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-book" aria-hidden="true"></i></span>
                                 <input id="hoteladdress" type="add"  [(ngModel)]="hotelService.selectedHotel.hoteladdress" class="form-control" name="hoteladdress" value="" placeholder="Address">                                        
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-web"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-globe"></i></span>
                                 <input id="hotelWeb" type="web" [(ngModel)]="hotelService.selectedHotel.hotelWeb" class="form-control" name="hotelWeb" value="" placeholder="Web Site">                                        
                             </div>
 
@@ -46,19 +46,19 @@
                             </div> 
 
                              <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-file"></i></span>
                                 <input id="category" type="type"  [(ngModel)]="hotelService.selectedHotel.category" class="form-control" name="category" value="" placeholder="Hotel Category">                                        
                             </div> 
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-building"></i></span>
                                 <input id="noOfRooms" type="rooms"  [(ngModel)]="hotelService.selectedHotel.noOfRooms" class="form-control" name="noOfRooms" value="" placeholder="No of rooms">                                        
                             </div>    
                             
                             <div style="margin-top:10px" class="form-group">
                                 <!-- Button -->
                                     <div class="col-sm-12 controls">
-                                        <input type="submit" value="Submit">
+                                        <input type="submit"  class="btn btn-primary btn-block" value="Submit">
                                     </div>
                             </div>
                         </form>     

@@ -1,84 +1,167 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
 <body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 100%;height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; ">
-  <div class="wrapper fadeInDown">
-  <div id="formContent">
-    <div class="card card-1">
-    <h2 class="inactive undeLineHover">Registration Info</h2>
-  
 
+<div class="container fadeInDown">
+<br>  
+<hr>
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+	<a [routerLink]="['/sign-in']" class="float-right btn btn-outline-primary mt-1">Log in</a>
+	<h4 class="card-title mt-2">Register Your Info..</h4>
+</div>
+
+<article class="card-body">
+    
 <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+    <div class="form-row">
+      <div class="col form-group">
+          <label>User Name *</label>
+          <input type="uname" #userName="ngModel" [(ngModel)]="userService.selectedUser.username"  name="username" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+          <div *ngIf="signUpForm.submitted && !username.valid">
+             <label class="validation-message">This field is required.</label>
+          </div>
+      </div>
+    </div> <br>
+
+    <div class="form-row">
+      <div class="col form-group">
+        <label>First Name * </label>   
+          <input type="text"  #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName" name="firstName" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+          <div *ngIf="signUpForm.submitted && !firstName.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+        </div> 
+      <div class="col form-group">
+        <label>Last name *</label>
+          <input type="text"  #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName" name="lastName" class="form-control" placeholder=" "
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
+          <div *ngIf="signUpForm.submitted && !lastName.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+        </div>
+    </div> 
   
-  <input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.username" name="username" placeholder="User Name"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
-  <div *ngIf="signUpForm.submitted && !username.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
-  <input type="text" #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName" name="firstName" placeholder="First Name"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
-  <div *ngIf="signUpForm.submitted && !firstName.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
-  <input type="text" #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName" name="lastName" placeholder="Last Name"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
-  <div *ngIf="signUpForm.submitted && !lastName.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
+    <div class="form-row">
+      <div class="col form-group">
+       <label>Email *</label>
+        <input type="email"  #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" class="form-control" placeholder=" "
+        required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+        <div *ngIf="signUpForm.submitted && !email.valid">
+          <label class="validation-message">This field is required.</label>
+        </div>
+      </div> 
+	
+      <div class="col form-group">
+        <label>Birth Day</label>
+          <input type="date" #birthDate="ngModel" [(ngModel)]="userService.selectedUser.birthDate" name="tel" placeholder="MM/DD/YYYY" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">  
+          <div *ngIf="signUpForm.submitted && !birthDate.valid">
+          </div>
+      </div>
+    </div>
 
-  <input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="tel" placeholder="Email"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
-  <div *ngIf="signUpForm.submitted && !email.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
+    <div class="form-group">
+      <label class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="gender" value="option1" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender" 
+        required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+        <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+        </div> 
+        <span class="form-check-label"> Male </span>
+      </label>
+      <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" value="option2" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender" 
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+          <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+          </div> 
+        <span class="form-check-label"> Female</span>
+      </label>
+    </div>
 
-  <input type="text" #phoneNumber="ngModel" [(ngModel)]="userService.selectedUser.phoneNumber" name="tel" placeholder="Mobile Number"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
-  <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+      </div>
+		  <select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+971</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		  </select>
+    	    <input name="" #phoneNumber="ngModel" [(ngModel)]="userService.selectedUser.phoneNumber" class="form-control" placeholder="Phone number" type="text"
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
+          <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+            <label class="validation-message">This field is required.</label>
+          </div> 
+    </div> 
 
-  <input type="text" #birthDate="ngModel" [(ngModel)]="userService.selectedUser.birthDate" name="tel" placeholder="MM/DD/YYYY"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">  
-  <div *ngIf="signUpForm.submitted && !birthDate.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
+    <div class="form-row">
+      <div class="col form-group">
+		    <label>Nationality *</label>
+		      <select id="inputState" #nationality="ngModel" [(ngModel)]="userService.selectedUser.nationality" class="form-control" placeholder="" 
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">
+          <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+            <label class="validation-message">This field is required.</label>
+          </div> 
+          <option> Choose...</option>
+            <option>England</option>
+            <option>Russia</option>
+            <option selected="">United States</option>
+            <option>India</option>
+            <option>Afganistan</option>
+            <option>China</option>
+            <option>Denmark</option>
+            <option>Brazil</option>
+            <option>France</option>
+            <option>Pakistan</option>
+            <option>Australia</option>
+          </select>
+      </div>
+    </div> <br>
 
-  <input type="text" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender" name="tel" placeholder="gender"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">  
-  <div *ngIf="signUpForm.submitted && !gender.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
-  <input type="text" #nationality="ngModel" [(ngModel)]="userService.selectedUser.nationality" name="tel" placeholder="Natonality"
-  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">  
-  <div *ngIf="signUpForm.submitted && !nationality.valid">
-    <label class="validation-message">This field is required.</label>
-  </div>
+      <div class="form-group">
+        <label>Create Password *</label>
+          <input class="form-control"  type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+          minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+          <div *ngIf="signUpForm.submitted && password.errors">
+            <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+            <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+          </div>
+      </div> 
+      <div class="form-group">
+      <label>Confirm Password *</label>
+        <input class="form-control" type="password2" #passwordNew="ngModel" [(ngModel)]="userService.selectedUser.passwordNew" name="password2" placeholder="Password"
+        minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !passwordNew.valid }">
+        <div *ngIf="signUpForm.submitted && passwordNew.errors">
+          <label *ngIf="passwordNew.errors.required" class="validation-message">This field is required.</label>
+          <label *ngIf="passwordNew.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+        </div>
+      </div> 
 
-  <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
-  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
-  <div *ngIf="signUpForm.submitted && password.errors">
-    <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
-    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
-  </div>
-  <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Confirm Password"
-  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
-  <div *ngIf="signUpForm.submitted && password.errors">
-    <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
-    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
-  </div>
+      <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-block" value="Register">
+      </div>  
+       <p><small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our  Terms of use and Privacy Policy.</small> </p>                                         
+  </form>
+  
+</article> <!-- card-body end .// -->
+    <div class="border-top card-body text-center">Have an account? 	<a [routerLink]="['/sign-in']">Log In</a></div>
+</div> 
+</div> 
 
-  <input type="submit" value="Sign Up">
-</form>
+</div> 
 
-<!-- Success message -->
-<div class="success" *ngIf="showSucessMessage">
-  Saved successfully
-</div>
 
-<!-- Error message -->
-<div class="alert" *ngIf="serverErrorMessages">
-  {{serverErrorMessages}}
-</div>
-<router-outlet></router-outlet>
-</div>
-</div>
-</div>
+</div> 
+
 </body>
+
