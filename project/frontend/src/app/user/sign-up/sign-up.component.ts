@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { UserService } from '../../shared//user/user.service';
 import { UserSigninService } from '../../shared/user/user-signin.service';
+import { TouristService } from '../../shared/tourist/tourist.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../shared/user/user.model';
@@ -26,6 +27,8 @@ export class SignUpComponent implements OnInit {
     this.userService.postUser(form.value).subscribe(
       res => {
         this.showSucessMessage = true;
+        this.userService.addTourist(form.value).subscribe(res=>{
+        });
         
         this.userSigninService.postUser(form.value).subscribe(
           res => {

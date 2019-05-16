@@ -12,9 +12,7 @@ export class UserSigninService {
 
   selectedUser: User = {
     username: '',
-    firstName: '',
     role: '',
-    lastName: '',
     password: '',
   };
 

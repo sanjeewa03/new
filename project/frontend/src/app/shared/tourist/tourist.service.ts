@@ -10,18 +10,21 @@ import { environment } from '../../../environments/environment';
 })
 export class TouristService {
 selectedTourist: Tourist = {
-    passportID: 0,
-    name:'',
+    username:'',
+    firstName:'',
+    lastName:'',
+    birthDate:new Date(),
+    gender:'',
+    phoneNumber:0,
     password:'',
     nationality:'',
     email: '',
-    tpNo:0
    
   };
   constructor(private http: HttpClient ) { }
   addTourist(tourist: Tourist){
     console.log("add tourist service func");
-    console.log(tourist.passportID);
+    console.log(tourist.username);
     return this.http.post(environment.apiBaseUrl + '/tourist/addtourist', tourist);
   }
 }

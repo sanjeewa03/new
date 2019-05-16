@@ -17,13 +17,12 @@ async function create(touristParam) {
 	
 	
     // validate
-    if (await Tourist.findOne({passportID: touristParam.passportID })) {
-        throw 'Username "' +touristParam.passportID + '" is already taken';
+    if (await Tourist.findOne({username: touristParam.username })) {
+        throw 'Username "' +touristParam.username + '" is already taken';
     }
 
     const tourist = new Tourist(touristParam);
 
-    
 
     // save user
     await tourist.save();

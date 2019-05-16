@@ -1,7 +1,12 @@
 export class User {
   username: string;
-  firstName: string;
   role: string;
-  lastName: string;
   password: string;
+  firstName:string;
+  lastName:string;
+  birthDate: Date = new Date();
+  gender: string;
+  phoneNumber: number;
+  nationality: string;
+  email: string;
 }
