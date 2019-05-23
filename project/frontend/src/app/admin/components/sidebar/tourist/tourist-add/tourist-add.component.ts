@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TouristService } from '../../../../../shared/tourist/tourist.service';
+import { UserService } from '../../../../../shared/user/user.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Tourist } from '../../../../../shared/tourist/tourist.model';
@@ -8,20 +8,22 @@ import { Tourist } from '../../../../../shared/tourist/tourist.model';
   selector: 'app-tourist-add',
   templateUrl: './tourist-add.component.html',
   styleUrls: ['./tourist-add.component.css'],
-  providers: [TouristService]
+  providers: [UserService]
 })
 export class TouristAddComponent implements OnInit {
 
-   constructor(private touristService: TouristService, public router: Router) { }
+   constructor(private userService: UserService, public router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit(form: NgForm){
-    console.log(form.value)
-    this.touristService.addTourist(form.value).subscribe(
+    console.log(form.value);
+    this.userService.postUser(form.value).subscribe(
       res => {
         console.log(res);
+        this.userService.addTourist(form.value).subscribe(res=>{
+        });
         form.reset();
         
 

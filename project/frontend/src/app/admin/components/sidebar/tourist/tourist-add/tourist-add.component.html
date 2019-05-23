@@ -15,74 +15,132 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form #addTouristForm="ngForm" (ngSubmit)="addTouristForm.valid && onSubmit(addTouristForm)">
-                                    
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                                <input id="touristUsername" type="uname" [(ngModel)]="touristService.selectedTourist.touristUsername" class="form-control" name="touristUsername" value="" placeholder="User Name">                                        
-                            </div>
-                                
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input id="firstName" type="fname" [(ngModel)]="touristService.selectedTourist.firstName"  class="form-control" name="firstName" placeholder="First Name">
-                             </div>
-
-                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input id="lastName" type="lname" [(ngModel)]="touristService.selectedTourist.lastName"  class="form-control" name="lastName" placeholder="Last Name">
-                             </div>
-
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input id="email" type="email" [(ngModel)]="touristService.selectedTourist.email"  class="form-control" name="email" placeholder="Email">
-                            </div>
-
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"> <i class="fa fa-phone"></i> </span>
-                                <input id="phone"  type="tel" [(ngModel)]="touristService.selectedTourist.tpNo"  class="form-control" name="tpNo" value="" placeholder="+97">                                
-                            </div>
-                            
-                             <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                <input class="input--style-1 js-datepicker" id="bdate" type="date" [(ngModel)]="touristService.selectedTourist.bdate"  class="form-control" name="bdate" value="" placeholder="DD/MM/YYYY">                                        
-                             </div>
-                             
-                             <div style="margin-bottom: 25px" class="input-group">
-                                <label class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="gender" value="option1" #gender="ngModel" [(ngModel)]="touristService.selectedTourist.gender" >
-                                         <span class="form-check-label"> Male </span>
-                                </label><br>
-                                <label class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" value="option2" #gender="ngModel" [(ngModel)]="touristService.selectedTourist.gender" >
-                                    <span class="form-check-label">Female </span>
-                                </label>
-                             </div>
-                              
-                         
-
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-flag"></i></span>
-                                <input id="nationality" type="country" [(ngModel)]="touristService.selectedTourist.nationality"  class="form-control" name="nationality" value="" placeholder="Nationality">                                        
-                            </div>
-                             
-                             <div style="margin-bottom: 25px" class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="login-password" type="password" [(ngModel)]="touristService.selectedTourist.password"  class="form-control" name="password" placeholder="Password">
-                            </div>
-                            <!----div style="margin-bottom: 25px" class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="login-password" type="password" [(ngModel)]="touristService.selectedTourist.password"  class="form-control" name="password" placeholder="Password">
-                            </div-->
-    
-                             <div style="margin-top:10px" class="form-group">
-                                    <!-- Button -->
-
-                                    <div class="col-sm-6 controls">
-                                      <input type="submit" class="btn btn-primary btn-block" value="Submit">
-                                     
-                                    </div>
+                        <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+                          <div class="form-row">
+                            <div class="col form-group">
+                                <label>User Name *</label>
+                                <input type="uname" #userName="ngModel" [(ngModel)]="userService.selectedUser.username"  name="username" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+                                <div *ngIf="signUpForm.submitted && !username.valid">
+                                   <label class="validation-message">This field is required.</label>
                                 </div>
-                            </form>     
+                            </div>
+                          </div> <br>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+                              <label>First Name * </label>
+                                <input type="text"  #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName" name="firstName" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+                                <div *ngIf="signUpForm.submitted && !firstName.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                              </div>
+                            <div class="col form-group">
+                              <label>Last name *</label>
+                                <input type="text"  #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName" name="lastName" class="form-control" placeholder=" "
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
+                                <div *ngIf="signUpForm.submitted && !lastName.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+                             <label>Email *</label>
+                              <input type="email"  #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" class="form-control" placeholder=" "
+                              required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+                              <div *ngIf="signUpForm.submitted && !email.valid">
+                                <label class="validation-message">This field is required.</label>
+                              </div>
+                            </div>
+
+                            <div class="col form-group">
+                              <label>Birth Day</label>
+                                <input type="date" #birthDate="ngModel" [(ngModel)]="userService.selectedUser.birthDate" name="birthDate" placeholder="MM/DD/YYYY" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">
+                                <div *ngIf="signUpForm.submitted && !birthDate.valid">
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" value="male" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender"
+                              required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+                              <div *ngIf="signUpForm.submitted && !gender.valid">
+                              </div>
+                              <span class="form-check-label"> Male </span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="female" #gender="ngModel" [(ngModel)]="userService.selectedUser.gender"
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+                                <div *ngIf="signUpForm.submitted && !gender.valid">
+                                </div>
+                              <span class="form-check-label"> Female</span>
+                            </label>
+                          </div>
+
+                          <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+		  
+    	                          <input name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="userService.selectedUser.phoneNumber" class="form-control" placeholder="Phone number" type="text"
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
+                                <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+		                          <label>Nationality *</label>
+		                            <select id="inputState" #nationality="ngModel" [(ngModel)]="userService.selectedUser.nationality" name="nationality" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">
+                                <div *ngIf="signUpForm.submitted && !nationality.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                                  <option value="England">England</option>
+                                  <option value="Russia">Russia</option>
+                                  <option  value="United States" selected>United States</option>
+                                  <option value="India">India</option>
+                                  <option value="Afganistan">Afganistan</option>
+                                  <option value="China">China</option>
+                                  <option value="Denmark">Denmark</option>
+                                  <option value="Brazil">Brazil</option>
+                                  <option value="France">France</option>
+                                  <option value="Pakistan">Pakistan</option>
+                                  <option value="Australia">Australia</option>
+                                </select>
+                            </div>
+                          </div> <br>
+
+                            <div class="form-group">
+                              <label>Create Password *</label>
+                                <input class="form-control"  type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+                                minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+                                <div *ngIf="signUpForm.submitted && password.errors">
+                                  <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+                                  <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            <label>Confirm Password *</label>
+                              <input class="form-control" type="password"  name="password2" placeholder="Password"
+                              minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !passwordNew.valid }">
+                              <div *ngIf="signUpForm.submitted && passwordNew.errors">
+                                <label *ngIf="passwordNew.errors.required" class="validation-message">This field is required.</label>
+                                <label *ngIf="passwordNew.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-block" value="Register">
+                            </div>
+                             <p><small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our  Terms of use and Privacy Policy.</small> </p>
+                        </form> 
                       </div>                     
                     </div>  
         </div>

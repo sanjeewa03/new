@@ -5,11 +5,18 @@
     "\\frontend\\src",
     "\\frontend\\src\\app",
     "\\frontend\\src\\app\\admin",
-    "\\frontend\\src\\app\\auth",
-    "\\frontend\\src\\app\\user",
-    "\\frontend\\src\\app\\user\\sign-in",
-    "\\frontend\\src\\app\\user\\sign-up"
+    "\\frontend\\src\\app\\admin\\components",
+    "\\frontend\\src\\app\\admin\\components\\sidebar",
+    "\\frontend\\src\\app\\admin\\components\\sidebar\\tourist",
+    "\\frontend\\src\\app\\admin\\components\\sidebar\\tourist\\tourist-add",
+    "\\frontend\\src\\app\\shared",
+    "\\frontend\\src\\app\\shared\\tourist",
+    "\\frontend\\src\\app\\shared\\user",
+    "\\sever",
+    "\\sever\\modelsControlersAndServices",
+    "\\sever\\modelsControlersAndServices\\tourist",
+    "\\sever\\modelsControlersAndServices\\users"
   ],
-  "SelectedNode": "\\frontend\\src\\app\\admin\\admin",
+  "SelectedNode": "\\frontend\\src\\app\\user\\sign-up\\sign-up.component.html",
   "PreviewInSolutionExplorer": false
 }
