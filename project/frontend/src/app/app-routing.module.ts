@@ -15,7 +15,6 @@ import { TouristComponent } from './admin/components/sidebar/tourist/tourist.com
 import { HotelAddComponent } from './admin/components/sidebar/hotel/hotel-add/hotel-add.component';
 import { AgencyAddComponent } from './admin/components/sidebar/safari-agency/agency-add/agency-add.component';
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
-import { TouristDataResolverService } from './admin/components/sidebar/tourist/tourist-data-resolver.service';
 
 
 
@@ -54,7 +53,7 @@ const routes: Routes = [
       {path: 'safari-agency/add', component: AgencyAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
 
       //admin dashboard sidebar tourist routes
-      {path:'tourist', component: TouristComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin', allTourists:TouristDataResolverService}},
+      {path:'tourist', component: TouristComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'tourist/add', component: TouristAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
 
 
@@ -73,7 +72,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: [TouristDataResolverService]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

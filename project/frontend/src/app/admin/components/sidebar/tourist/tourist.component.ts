@@ -24,16 +24,15 @@ export interface dataInterface {
 export class TouristComponent implements OnInit {
   data: dataInterface[];
   displayedColumns: string[] = ["username","firstName","lastName","birthDate","gender","phoneNumber","nationality","email"];
-  dataSource = this.data;
+  dataSource = this.touristService.getAll();
   
 
   constructor(private touristService: TouristService, public router: Router,private route: ActivatedRoute) {
     
-    console.log(this.data);
   }
   
   ngOnInit() {
-    this.data = this.route.snapshot.data.allTourists;
+    this.touristService.getAll();
     console.log(this.data);
   }
 
