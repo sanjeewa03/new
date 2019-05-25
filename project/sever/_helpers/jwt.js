@@ -14,7 +14,8 @@ function jwt() {
 			'/message/addmessage',
             '/hotel/addhotel',
             '/safari/addagency',
-			'/tourist/addtourist'
+			'/tourist/addtourist',
+			'/tourist/getall'
         ]
     });
 }

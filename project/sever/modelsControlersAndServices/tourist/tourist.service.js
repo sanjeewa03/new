@@ -8,7 +8,8 @@ const Tourist = db.Tourist;
 
 module.exports = {
     
-    create
+    create,
+	getAll
 };
 
 async function create(touristParam) {
@@ -26,4 +27,8 @@ async function create(touristParam) {
 
     // save user
     await tourist.save();
+}
+
+async function getAll() {
+    return await Tourist.find();
 }

@@ -38,7 +38,7 @@ import { AgencyEditComponent } from './admin/components/sidebar/safari-agency/ag
 import { TouristComponent } from './admin/components/sidebar/tourist/tourist.component';
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
 import { TouristEditComponent } from './admin/components/sidebar/tourist/tourist-edit/tourist-edit.component';
-
+import { MatTableModule } from '@angular/material';
 
 
 export function tokenGetter() {
@@ -92,7 +92,8 @@ export function tokenGetter() {
         whitelistedDomains: ['example.com'],
         blacklistedRoutes: ['example.com/examplebadroute/']
       }
-    })
+    }),
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

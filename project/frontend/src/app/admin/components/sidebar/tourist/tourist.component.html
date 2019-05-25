@@ -23,7 +23,65 @@
 </div>
 
 <div class="well">
-    <table class="table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+       
+        <!-- username Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+      
+        <!-- firstName Column -->
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef> First Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+
+        <!-- lastName Column -->
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+      
+        <!-- birthdate Column -->
+        <ng-container matColumnDef="birthDate">
+            <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+            <td mat-cell *matCellDef="let element"> {{element.birthDate}} </td>
+          </ng-container>
+
+        <!-- gender Column -->
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+          </ng-container>
+
+        <!-- phoneNumber Column -->
+        <ng-container matColumnDef="phoneNumber">
+            <th mat-header-cell *matHeaderCellDef> Tel-Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+          </ng-container>
+
+        <!-- nationality Column -->
+        <ng-container matColumnDef="nationality">
+            <th mat-header-cell *matHeaderCellDef> Nationality </th>
+            <td mat-cell *matCellDef="let element"> {{element.nationality}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+   <!-- <table class="table">
       <thead>
         <tr>
           <th>User Name</th>
@@ -35,7 +93,7 @@
           <th>Gender</th>
           <th>Nationality</th>
           <th>Password</th>
-          <!----th>Password2</th-->
+          
           
           <th></th>
                                    
@@ -45,7 +103,7 @@
       </thead>
       <tbody>
         <tr>
-          <td></td>
+          <td> {{ data.username }}</td>
           <td></td>
           <td></td>
           <td></td>
@@ -62,23 +120,7 @@
           </td>
         </tr>
         
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      
-          <td>
-            <a href="user.html"><i class="glyphicon glyphicon-edit"></i></a>
-            <a href="#myModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-    
-          </td>
-        </tr>
+        
         <tr>
             <td></td>
             <td></td>
@@ -129,7 +171,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table>-->
 </div>
 <div class="pagination">
     <ul>
