@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Tourist } from './tourist.model';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { dataInterface } from 'src/app/admin/components/sidebar/tourist/tourist.component';
+import { Observable } from 'rxjs';
 
 
 
@@ -28,8 +30,8 @@ selectedTourist: Tourist = {
     return this.http.post(environment.apiBaseUrl + '/tourist/addtourist', tourist);
   }
 
-  getAll(){
+  getAll():Observable<dataInterface[]>{
     console.log("getAll tourist service func");
-    return this.http.get(environment.apiBaseUrl + '/tourist/getall');
+    return this.http.get<dataInterface[]>(environment.apiBaseUrl + '/tourist/getall');
   }
 }

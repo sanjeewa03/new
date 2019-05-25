@@ -14,6 +14,13 @@ export class UserSigninService {
     username: '',
     role: '',
     password: '',
+    firstName:'',
+    lastName:'',
+    birthDate:new Date(),
+    gender:'',
+    phoneNumber:0,
+    nationality:'',
+    email: '',
   };
 
   constructor(private http: HttpClient ) { }
