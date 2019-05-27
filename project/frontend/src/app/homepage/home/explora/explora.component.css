@@ -33,3 +33,187 @@
 .a {
     color:#12bb4a;
 }
+.accomodation_item {
+    margin-bottom: 30px;
+  }
+  
+  .accomodation_item .hotel_img {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .accomodation_item .hotel_img img {
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  
+  .accomodation_item .hotel_img .theme_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    padding: 5px 25px;
+    max-width: 128px;
+  }
+  
+  .accomodation_item .hotel_img:hover img {
+    -webkit-transform: scale(1.19);
+    -ms-transform: scale(1.19);
+    transform: scale(1.19);
+  }
+  
+  .accomodation_item h5 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #52c5fd;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  
+  .accomodation_item h5 small {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .sec_h4 {
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0px;
+  }
+  
+  .accomodation_two {
+    margin-bottom: -40px;
+  }
+  
+  .accomodation_two .accomodation_item {
+    margin-bottom: 45px;
+  }
+  /*font Variables*/
+/*Color Variables*/
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+.col-md-offset-right-1, .col-lg-offset-right-1 {
+  margin-right: 8.33333333%;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.list_style {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.row.m0 {
+  margin: 0px;
+}
+
+.p0 {
+  padding: 0px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+body {
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #777777;
+}
+
+section {
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.section_gap {
+  padding: 120px 0;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.mb_30 {
+  margin-bottom: -30px;
+}
+
+.section_title {
+  margin-bottom: 75px;
+}
+
+.section_title h2 {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+.section_title p {
+  font-size: 14px;
+  line-height: 30px;
+  color: #777777;
+  margin-bottom: 0px;
+}
+
+.title_color {
+  color: #222222;
+}
+
+.title_w {
+  color: #fff;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+}
