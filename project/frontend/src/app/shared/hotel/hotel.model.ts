@@ -1,11 +1,11 @@
 export class Hotel {
-    hotelID: number;
+    username: string;
     hotelName:string;
-    location:string;
-    email: string;
-    fax:string;
-    hotelType:string;
-	  noOfRooms:number;
-    pricePerRoom:number;
+    hoteladdress:string;
+    hotelWeb:string;
+    hotelEmail: string;
+    phone:number;
+    category:string;
+	noOfRooms:number;
     
 }

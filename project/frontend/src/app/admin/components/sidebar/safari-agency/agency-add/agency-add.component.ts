@@ -23,7 +23,7 @@ export class AgencyAddComponent implements OnInit {
     this.safariService.addAgency(form.value).subscribe(
       res => {
         console.log(res);
-        
+        form.reset();
 
       }
       

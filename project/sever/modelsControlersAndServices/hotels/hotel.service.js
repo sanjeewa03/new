@@ -15,8 +15,8 @@ async function create(hotelParam) {
     console.log("inside hotel create func");
 	
     // validate
-    if (await Hotel.findOne({ hotelID: hotelParam.hotelID })) {
-        throw 'Username "' + hotelParam.hotelID + '" is already taken';
+    if (await Hotel.findOne({ hotelID: hotelParam.username })) {
+        throw 'Username "' + hotelParam.username + '" is already taken';
     }
 
     const hotel = new Hotel(hotelParam);

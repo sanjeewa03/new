@@ -9,19 +9,19 @@ import { environment } from '../../../environments/environment';
 })
 export class HotelService {
   selectedHotel: Hotel = {
-    hotelID: 0,
+    username: '',
     hotelName:'',
-    location:'',
-    email: '',
-    fax:'',
-    hotelType:'',
-	  noOfRooms:0,
-    pricePerRoom:0,
+    hoteladdress:'',
+    hotelWeb: '',
+    hotelEmail:'',
+    phone:0,
+	  category:'',
+    noOfRooms:0,
   };
   constructor(private http: HttpClient ) { }
   addHotel(hotel: Hotel){
     console.log("add hottel service func");
-    console.log(hotel.hotelID);
+    console.log(hotel.username);
     return this.http.post(environment.apiBaseUrl + '/hotel/addhotel', hotel);
   }
 }

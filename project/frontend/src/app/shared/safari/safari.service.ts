@@ -9,18 +9,19 @@ import { environment } from '../../../environments/environment';
 })
 export class SafariService {
   selectedSafari: Safari = {
-    safariID: 0,
-    safariName:'',
-    location:'',
-    email: '',
-    fax:'',
-	noOfVehicles:0,
+    username: '',
+    agencyName:'',
+    agencyAddress:'',
+    agencyWeb: '',
+    agencyEmail:'',
+    agencyPhone:0,
+    noOfVehicles:0
    
   };
   constructor(private http: HttpClient ) { }
   addAgency(safari: Safari){
     console.log("add safari service func");
-    console.log(safari.safariID);
+    console.log(safari.username);
     return this.http.post(environment.apiBaseUrl + '/safari/addagency', safari);
   }
 }

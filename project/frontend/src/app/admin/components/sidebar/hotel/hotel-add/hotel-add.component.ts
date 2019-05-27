@@ -23,7 +23,7 @@ export class HotelAddComponent implements OnInit {
     this.hotelService.addHotel(form.value).subscribe(
       res => {
         console.log(res);
-        
+        form.reset();
 
       }
       

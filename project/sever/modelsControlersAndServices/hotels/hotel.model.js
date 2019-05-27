@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    hotelID: { type: Number, unique: true, required: true },
-    hotelName: { type: String, unique: true, required: true },
-    location: { type: String, unique: false, required: true },
-    email: { type: String, unique: true, required: true },
-    fax: { type: String, unique: true, required: true },
-    hotelType: { type: String, unique: false, required: true },
-	noOfRooms: { type: Number, unique: false, required: true },
-    pricePerRoom: { type: Number, unique: false, required: true },
+    username: { type: String, unique: true, required: true },
+    hotelName: { type: String, unique: false, required: true },
+    hoteladdress: { type: String, unique: false, required: true },
+    hotelWeb: { type: String, unique: true, required: true },
+    hotelEmail: { type: String, unique: true, required: true },
+    phone: { type: Number, unique: false, required: true },
+	category: { type: String, unique: false, required: true },
+    noOfRooms: { type: Number, unique: false, required: true },
     
 });
 

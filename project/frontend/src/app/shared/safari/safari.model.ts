@@ -1,9 +1,10 @@
 export class Safari {
-    safariID: number;
-    safariName:string;
-    location:string;
-    email: string;
-    fax:string;
+    username: string;
+    agencyName:string;
+    agencyAddress:string;
+    agencyWeb: string;
+    agencyEmail:string;
+    agencyPhone:number;
     noOfVehicles:number;
     
 }

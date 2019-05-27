@@ -3,11 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    safariID: { type: Number, unique: true, required: true },
-    safariName: { type: String, unique: false, required: true },
-    location: { type: String, unique: false, required: true },
-    email: { type: String, unique: true, required: true },
-    fax: { type: String, unique: true, required: true },
+    username: { type: String, unique: true, required: true },
+    agencyName: { type: String, unique: false, required: true },
+    agencyAddress: { type: String, unique: false, required: true },
+    agencyWeb: { type: String, unique: true, required: true },
+    agencyEmail: { type: String, unique: true, required: true },
+	agencyPhone: { type: Number, unique: false, required: true },
 	noOfVehicles: { type: Number, unique: false, required: true },
     
     

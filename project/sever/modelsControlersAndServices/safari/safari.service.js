@@ -17,8 +17,8 @@ async function create(safariParam) {
 	
 	
     // validate
-    if (await Safari.findOne({safariID: safariParam.safariID })) {
-        throw 'Username "' +safariParam.safariID + '" is already taken';
+    if (await Safari.findOne({safariID: safariParam.username })) {
+        throw 'Username "' +safariParam.username + '" is already taken';
     }
 
     const safari = new Safari(safariParam);
