@@ -1,0 +1,22 @@
+<h1>Day Trips</h1>
+<h2>Best Day Trips from  Sri Lanka</h2>
+<p>Use Sri Lanka Travel Planner as a hub to explore other exciting historic locations around the Sri Lanka. If you’re planning to visit Kandy Sri Lanka for a holiday, add a short weekend getaway to your itinerary and get cheap deals on day tours from Kandy. Many of the best Sri Lanka cities, villages, castles and famous landmarks can be included in one day trips from Kandy, when you travel by train, by coach, or by car. Choose from a wide variety of Kandy breaks. Book one of the day trips from Kandy to see the remarkable Places in Sri Lanka. We will send a experience and expert who drive carefully in Sri Lankan Roads, well expert in activities, trustworthy of your Day tour.</p>
+
+<div class="row">
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button>
+   
+
+  
+    <ul id ="thumbnailsList">
+        <li *ngFor="let image of visibleImages | imageFilter:filterBy"> 
+            <a [routerLink]="['/image',image.id]">
+            <img src="{{image.url}}" class="tn" width="200" height="160" >
+      
+            </a>
+            
+        </li>
+    
+    </ul>
+</div>

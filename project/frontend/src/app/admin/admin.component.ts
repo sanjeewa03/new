@@ -12,7 +12,7 @@ export class AdminComponent implements OnInit {
     @Inject(DOCUMENT) private _document) { }
 
   ngOnInit() {
-    const s = this.renderer2.createElement('script');
+    /*const s = this.renderer2.createElement('script');
    s.type = 'text/javascript';
    s.src = '/assets/js/settings.js';
    s.text = ``;
@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
    v.type = 'text/javascript';
    v.src = '/assets/js/demo_dashboard.js';
    v.text = ``;
-   this.renderer2.appendChild(this._document.body, v);
+   this.renderer2.appendChild(this._document.body, v);*/
   }
 
 }

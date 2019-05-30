@@ -39,6 +39,9 @@ import { TouristComponent } from './admin/components/sidebar/tourist/tourist.com
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
 import { TouristEditComponent } from './admin/components/sidebar/tourist/tourist-edit/tourist-edit.component';
 import { MatTableModule,  MatPaginatorModule } from '@angular/material';
+import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.component';
+import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
+import { ImageFilterPipe } from './homepage/home/tourplane/image/shared/filter.pipe';
 
 
 export function tokenGetter() {
@@ -79,6 +82,9 @@ export function tokenGetter() {
     TouristComponent,
     TouristAddComponent,
     TouristEditComponent,
+    GalleryComponent,
+    ImageDetailComponent,
+    ImageFilterPipe,
    
   ],
   imports: [

@@ -15,6 +15,8 @@ import { TouristComponent } from './admin/components/sidebar/tourist/tourist.com
 import { HotelAddComponent } from './admin/components/sidebar/hotel/hotel-add/hotel-add.component';
 import { AgencyAddComponent } from './admin/components/sidebar/safari-agency/agency-add/agency-add.component';
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
+import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.component';
+import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
 
 
 
@@ -67,7 +69,11 @@ const routes: Routes = [
     data: { 
     expectedRole: 'User'
     }
-  }  
+  },
+  {
+    path:'gallery', component: GalleryComponent
+  },
+  { path: "image/:id",component:ImageDetailComponent },
 ];
 
 @NgModule({
