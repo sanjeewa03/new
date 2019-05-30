@@ -85,6 +85,7 @@ export function tokenGetter() {
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,
+    
    
   ],
   imports: [
