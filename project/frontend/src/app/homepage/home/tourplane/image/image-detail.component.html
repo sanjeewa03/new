@@ -1,17 +1,47 @@
 <div class="row">
     <div class ="col-md-12">
         <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
-        <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">BOOK NOW </button>
+       
     </div>
 </div>
-
-<div class="row">
-    <div class ="col-md-12 caption-row">
-        <span id="caption">
-            {{image.caption}}
-        
-        </span>
-       
+<div class="split right">
+        <div class="header">
+                <span id="header">
+                        {{image.title}}
+                    </span>
+        </div>
+        <br>
+        <button class="btn btn-primary" [class.active]="filterBy=='all'" (click)="filterBy='all'">BOOK NOW </button>
+        <div class="row">
+                <div class = "description">
+                    <span id="caption">
+                        {{image.caption}}
+                    </span>
+                    </div>
+            </div>
+        <button class="btn btn-success" [class.active]="filterBy=='all'" (click)="filterBy='all'">Customize This Tour </button>
+    </div>
+    
+    
+    
+<div class ="row">
+        <div class ="col-md-12 caption-row">
+        <article>
+                <input type="checkbox" id="read_more" role="button" class="btn btn-primary">
+                <label for="read_more" onclick=""><span>See More</span><span>Hide </span></label>     
+            
+                <section>
+                  <img src = "assets/uploads/image1.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/uploads/image2.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/uploads/image3.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/uploads/image4.jpg" width="200px" height ="200px"> 
+                  
+                 
+                </section>    
+                <section>
+                    <img src = "assets/uploads/image6.png" width="200px" height ="200px"> 
+                    <img src = "assets/uploads/image7.jpg" width="200px" height ="200px"> 
+                    <img src = "assets/uploads/image8.jpg" width="200px" height ="200px"> 
+                </section>
+            </article>
 </div>
-
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">Customize This Tour </button>

@@ -1,14 +1,53 @@
-<h1>Day Trips</h1>
-<h2>Best Day Trips from  Sri Lanka</h2>
-<p>Use Sri Lanka Travel Planner as a hub to explore other exciting historic locations around the Sri Lanka. If you’re planning to visit Kandy Sri Lanka for a holiday, add a short weekend getaway to your itinerary and get cheap deals on day tours from Kandy. Many of the best Sri Lanka cities, villages, castles and famous landmarks can be included in one day trips from Kandy, when you travel by train, by coach, or by car. Choose from a wide variety of Kandy breaks. Book one of the day trips from Kandy to see the remarkable Places in Sri Lanka. We will send a experience and expert who drive carefully in Sri Lankan Roads, well expert in activities, trustworthy of your Day tour.</p>
+<!--header--->
+<nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
+    <img class="navbar-brand" src="assets/img/logo.png" id="logo_custom" width="8%"  alt="logo">
+       <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+           <span class="navbar-toggler-icon "></span>
+       </button>
+         <div class="collapse navbar-collapse " id="collapsibleNavbar">
+             <ul class="navbar-nav ml-auto ">
+               <li class="nav-item">
+                <h1>Sri Lanka Day <span class="a">  Tour Packages </span></h1>
+               </li>
+               
+             </ul>
+             <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" >
+                    <div class="input-group-btn">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+         </div>  
+</nav>
+<br><br><br><br><br><br><br>
 
+ <!--galary--->     
+<h2><b>Best Day Trips from  Sri Lanka</b></h2>
+        <article>
+            <input type="checkbox" id="read_more" role="button" class="btn btn-danger">
+            <label for="read_more" onclick=""><span>Read More</span><span>Hide </span></label>     
+        
+            <section>
+                <p>Use <b>Backpacking Sri Lanka</b> as a hub to explore other exciting historic locations around the Sri Lanka.If you’re planning to visit Kandy Sri Lanka for a holiday, add a short weekend getaway to your itinerary and get cheap deals on day tours from Kandy. </p>
+            </section>    
+            <section>
+                <p> Many of the best Sri Lanka cities, villages, castles and famous landmarks can be included in one day trips from Kandy, when you travel by train, by coach, or by car. Choose from a wide variety of Kandy breaks. Book one of the day trips from Kandy to see the remarkable Places in Sri Lanka. We will send a experience and expert who drive carefully in Sri Lankan Roads, well expert in activities, trustworthy of your Day tour.</p>
+            </section>
+        </article>
+    
+       
 <div class="row">
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button>
-   
 
-  
+    <button type="button" class="btn btn-primary" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
+    <button type="button" class="btn btn-warning" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
+    <button type="button" class="btn btn-success" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button>
+
+    
+
     <ul id ="thumbnailsList">
         <li *ngFor="let image of visibleImages | imageFilter:filterBy"> 
             <a [routerLink]="['/image',image.id]">
