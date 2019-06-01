@@ -1,0 +1,154 @@
+
+<header class="header_area">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"><img src="assets/img/logo.png" width ="100px" height ="100px"alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                <h2>Backpacking > <span class="a">Trip Planner</span></h2>
+                <ul class="nav navbar-nav menu_nav ml-auto">
+                    
+                    <!----li class="nav-item submenu dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tour</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Hotel</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog-single.html">Safari</a></li>
+                        </ul>
+                    </li--> 
+                    <ul class="nav navbar-nav menu_nav ml-auto"></ul>
+                            <li class="nav-item">
+                                <a [routerLink]="['/signup']" class="btn btn-success btn-group-lg" role="group" style="margin:5px;" >Sign Up</a>
+                                
+                                <a [routerLink]="['/signin']" class="btn btn-success" style="margin:5px;">Sign In</a>
+                            </li>
+                </ul>
+            </div> 
+        </nav>
+    </div>
+  </header>
+  
+  
+  <body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 1700px; height:1450px; background-position: center; background-repeat: no-repeat; background-size: cover; opacity:0.2px;">
+    <div id="booking" class="section fadeInDown ">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md col-md-push-5">
+              <div class="booking-cta">
+                
+                <div class="row">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-pull-7">
+              <div class="booking-form">
+                <form>
+                    <div class="row">
+                    <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Destination</span>
+                    <input class="form-control" type="text" placeholder="Enter a destination ">
+                  </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                  <div class="form-group">
+                      <span class="form-label">Email</span>
+                      <input class="form-control" type="text" placeholder="Enter your email">
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Start Date</span>
+                        <input class="form-control" type="date" required>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">End Date</span>
+                        <input class="form-control" type="date" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Adults</span>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Children</span>
+                        <select class="form-control">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <div class="form-row p-t-20">
+                      <label class="label label--block">Are you looking for Hotel Bookings?</label>
+                      <div class="p-t-15">
+                          <label class="radio-container m-r-55">Yes
+                              <input type="radio" checked="checked" name="exist">
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="radio-container">No
+                              <input type="radio" name="exist">
+                              <span class="checkmark"></span>
+                          </label>
+                      </div>
+                  </div>
+                  <div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <div class="form-row p-t-20">
+                      <label class="label label--block">Are you looking for Safari vehicles?</label>
+                      <div class="p-t-15">
+                          <label class="radio-container m-r-55">Yes
+                              <input type="radio" checked="checked" name="exist">
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="radio-container">No
+                              <input type="radio" name="exist">
+                              <span class="checkmark"></span>
+                          </label>
+                      </div>
+                  </div>
+                  <div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-btn">
+                    <button  [routerLink]="['/custom']" class="submit-btn" >See Your Plan</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  

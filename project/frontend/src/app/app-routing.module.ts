@@ -17,6 +17,10 @@ import { AgencyAddComponent } from './admin/components/sidebar/safari-agency/age
 import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-add/tourist-add.component';
 import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.component';
 import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
+import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
+import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
+import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
+
 
 
 
@@ -73,7 +77,14 @@ const routes: Routes = [
   {
     path:'gallery', component: GalleryComponent
   },
-  { path: "image/:id",component:ImageDetailComponent },
+  { path: "image/:id",component:ImageDetailComponent 
+},
+  { path: "forms",component:FormsComponent 
+},
+   {path: "custom",component:CustomComponent 
+},
+    {path: "customizedform",component:CustomizedformComponent 
+},
 ];
 
 @NgModule({

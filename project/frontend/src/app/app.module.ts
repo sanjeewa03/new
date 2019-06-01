@@ -42,6 +42,12 @@ import { MatTableModule,  MatPaginatorModule } from '@angular/material';
 import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.component';
 import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
 import { ImageFilterPipe } from './homepage/home/tourplane/image/shared/filter.pipe';
+import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
+import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
+import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
+
+
+
 
 
 export function tokenGetter() {
@@ -85,6 +91,10 @@ export function tokenGetter() {
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,
+    FormsComponent,
+    CustomComponent,
+    CustomizedformComponent,
+   
     
    
   ],

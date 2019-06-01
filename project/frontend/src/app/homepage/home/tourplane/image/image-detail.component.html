@@ -7,11 +7,17 @@
 <div class="split right">
         <div class="header">
                 <span id="header">
+                        {{image.header}}
+                    </span>
+        </div>
+        <br>
+        <div class="title">
+                <span id="title">
                         {{image.title}}
                     </span>
         </div>
         <br>
-        <button class="btn btn-primary" [class.active]="filterBy=='all'" (click)="filterBy='all'">BOOK NOW </button>
+        
         <div class="row">
                 <div class = "description">
                     <span id="caption">
@@ -19,7 +25,7 @@
                     </span>
                     </div>
             </div>
-        <button class="btn btn-success" [class.active]="filterBy=='all'" (click)="filterBy='all'">Customize This Tour </button>
+        <button [routerLink]="['/forms']" class="button btn-warning" [class.active]="filterBy=='all'" (click)="filterBy='all'">Plan Your Tour </button>
     </div>
     
     
@@ -31,17 +37,19 @@
                 <label for="read_more" onclick=""><span>See More</span><span>Hide </span></label>     
             
                 <section>
-                  <img src = "assets/uploads/image1.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/uploads/image2.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/uploads/image3.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/uploads/image4.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/img/uploads/image1.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/img/uploads/image2.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/img/uploads/image3.jpg" width="200px" height ="200px"> 
+                  <img src = "assets/img/uploads/image4.jpg" width="200px" height ="200px"> 
                   
                  
-                </section>    
+                </section> 
+                <br>   
                 <section>
-                    <img src = "assets/uploads/image6.png" width="200px" height ="200px"> 
-                    <img src = "assets/uploads/image7.jpg" width="200px" height ="200px"> 
-                    <img src = "assets/uploads/image8.jpg" width="200px" height ="200px"> 
+                    <img src = "assets/img/uploads/image6.png" width="200px" height ="200px"> 
+                    <img src = "assets/img/uploads/image7.jpg" width="200px" height ="200px"> 
+                    <img src = "assets/img/uploads/image8.jpg" width="200px" height ="200px"> 
+                    <img src = "assets/img/uploads/image5.jpg" width="200px" height ="200px"> 
                 </section>
             </article>
 </div>
