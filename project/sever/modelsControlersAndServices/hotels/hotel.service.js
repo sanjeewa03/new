@@ -8,7 +8,8 @@ const Hotel = db.Hotel;
 
 module.exports = {
     
-    create
+    create,
+    getAll
 };
 
 async function create(hotelParam) {
@@ -25,4 +26,8 @@ async function create(hotelParam) {
 
     // save user
     await hotel.save();
+}
+
+async function getAll() {
+    return await Hotel.find();
 }

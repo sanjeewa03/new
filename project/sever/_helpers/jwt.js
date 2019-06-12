@@ -13,10 +13,11 @@ function jwt() {
             '/users/register',
 			'/message/addmessage',
             '/hotel/addhotel',
+            '/hotel/getall',
             '/safari/addagency',
 			'/tourist/addtourist',
             '/tourist/getall',
-            '/image/',
+            '/image:id',
             '/public',
             '/package/addpackage',
             '/package/getall'
