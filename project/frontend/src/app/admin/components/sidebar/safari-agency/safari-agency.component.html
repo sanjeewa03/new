@@ -23,99 +23,60 @@
 </div>
 
 <div class="well">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>User Name</th> 
-          <th>Agency Name</th> 
-          <th>Address</th>
-          <th>Web</th>
-          <th>Email</th>
-          <th>Telephone</th>
-          <th>Vehicles</th>
-          <th></th>
-                                   
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-          <th style="width: 36px;"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <th></th>
-          <td></td>
-          <th></th>
-          
-          <td>
-              <a href=""><i class="glyphicon glyphicon-edit"></i></a>
-              <a href="" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-          </td>
-        </tr>
-        
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <th></th>
-          <td></td>
-           
-          <td>
-            <a href=""><i class="glyphicon glyphicon-edit"></i></a>
-            <a href="" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-    
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <th></th>
-          <td></td>
-          
-            
-          <td>
-            <a href=""><i class="glyphicon glyphicon-edit"></i></a>
-            <a href="" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <th></th>
-          <td></td>
-         
-           
-          <td>
-            <a href=""><i class="glyphicon glyphicon-edit"></i></a>
-            <a href="" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <th></th>
-          <td></td>
-            
-          <td>
-            <a href=""><i class="glyphicon glyphicon-edit"></i></a>
-            <a href="" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+   
+    <!-- username Column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+    </ng-container>
+  
+    <!-- firstName Column -->
+    <ng-container matColumnDef="agencyName">
+      <th mat-header-cell *matHeaderCellDef> Hotel Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.agencyName}} </td>
+    </ng-container>
+
+    <!-- lastName Column -->
+    <ng-container matColumnDef="agencyAddress">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.agencyAddress}} </td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="agencyEmail">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.agencyEmail}} </td>
+      </ng-container>
+
+  
+    <!-- birthdate Column -->
+    <ng-container matColumnDef="agencyWeb">
+        <th mat-header-cell *matHeaderCellDef> Web Site </th>
+        <td mat-cell *matCellDef="let element"> {{element.agencyWeb}} </td>
+      </ng-container>
+
+    <!-- gender Column -->
+    <ng-container matColumnDef="agencyPhone">
+        <th mat-header-cell *matHeaderCellDef> Mobile No </th>
+        <td mat-cell *matCellDef="let element"> {{element.agencyPhone}} </td>
+      </ng-container>
+
+   
+
+    <!-- nationality Column -->
+    <ng-container matColumnDef="noOfVehicles">
+        <th mat-header-cell *matHeaderCellDef> No Of Vehicles </th>
+        <td mat-cell *matCellDef="let element"> {{element.noOfVehicles}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>
 <div class="pagination">
     <ul>

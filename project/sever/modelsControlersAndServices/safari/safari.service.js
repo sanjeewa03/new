@@ -8,7 +8,8 @@ const Safari = db.Safari;
 
 module.exports = {
     
-    create
+    create,
+    getAll
 };
 
 async function create(safariParam) {
@@ -27,4 +28,7 @@ async function create(safariParam) {
 
     // save user
     await safari.save();
+}
+async function getAll() {
+    return await Safari.find();
 }

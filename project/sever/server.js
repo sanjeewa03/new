@@ -13,9 +13,14 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // use JWT auth to secure the api
-app.use(jwt());
+//app.use(jwt());
 
-//app.use('/public', express.static('public'));
+//app.use( express.static('public'));
+
+var publicDir = require('path').join(__dirname,'/public');
+console.log(publicDir);
+app.use(express.static(publicDir));
+
 
 // api routes
 app.use('/users', require('./modelsControlersAndServices/users/users.controller'));

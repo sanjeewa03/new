@@ -15,10 +15,12 @@ function jwt() {
             '/hotel/addhotel',
             '/hotel/getall',
             '/safari/addagency',
+            '/safari/getall',
 			'/tourist/addtourist',
-            '/tourist/getall',
-            '/image:id',
-            '/public',
+            '/image/getall',
+            '/Capture6.PNG',
+            '/test.txt',
+            '/img',
             '/package/addpackage',
             '/package/getall'
         ]

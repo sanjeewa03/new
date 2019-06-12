@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
   
   _id: mongoose.Schema.Types.ObjectId,
+  name: { type: String, required: false},
+  tag: { type: Array, required:false },
+  imgName:{ type: String, required:false},
   productImage: { type: String, required: true },
   
 });
