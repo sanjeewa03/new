@@ -144,21 +144,23 @@ body{
 .contact-info h2{
   margin-bottom: 10%;
 }
-.col-md-9{
+.contact-col-md-9{
   background: #fff;
-  padding: 3%;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  padding: 5%;
+  width:250%;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+ 
 }
-.contact-form label{
+.contact-col-md-9 label{
   font-weight:600;
 }
-.contact-form button{
+.contact-col-md-9 button{
   background: #25274d;
   color: #fff;
   font-weight: 600;
-  width: 25%;
+  width: 55%;
 }
-.contact-form button:focus{
+.contact-col-md-9 button:focus{
   box-shadow:none;
 }

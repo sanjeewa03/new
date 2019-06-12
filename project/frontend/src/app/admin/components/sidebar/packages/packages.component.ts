@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PackageService } from '../../../../shared/package/package.service';
 import { Router,ActivatedRoute } from '@angular/router';
+import { Package } from 'src/app/shared/package/package.model';
  
 export interface dataInterface {
   username:string;
@@ -35,5 +36,6 @@ export class PackagesComponent implements OnInit {
     this.packageService.getAll();
     console.log(this.data);
   }
+  
 
 }
