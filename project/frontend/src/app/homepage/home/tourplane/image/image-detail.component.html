@@ -1,55 +1,57 @@
 <div class="row">
-    <div class ="col-md-12">
-        <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
-       
+        <div class ="col-md-12">
+            <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
+           
+        </div>
     </div>
-</div>
-<div class="split right">
-        <div class="header">
-                <span id="header">
-                        {{image.header}}
-                    </span>
-        </div>
-        <br>
-        <div class="title">
-                <span id="title">
-                        {{image.title}}
-                    </span>
-        </div>
-        <br>
-        
-        <div class="row">
-                <div class = "description">
-                    <span id="caption">
-                        {{image.caption}}
-                    </span>
-                    </div>
+    <div class="split right">
+            <div class="header">
+                    <span id="header">
+                            {{image.header}}
+                        </span>
             </div>
-        <button [routerLink]="['/forms']" class="button btn-warning" [class.active]="filterBy=='all'" (click)="filterBy='all'">Plan Your Tour </button>
+            <br>
+            <div class="title">
+                    <span id="title">
+                            {{image.title}}
+                        </span>
+            </div>
+            <br>
+            
+            <div class="row">
+                    <div class = "description">
+                        <span id="caption">
+                            {{image.caption}}
+                        </span>
+                        </div>
+                </div>
+            <button [routerLink]="['/forms']" class="button btn-warning" [class.active]="filterBy=='all'" (click)="filterBy='all'">Plan Your Tour </button><br>
+            <div class="border-top card-body text-center"><a [routerLink]="['/home']">BACKPACKING SRI LANKA</a></div>
+        </div>
+        
+        
+        
+    <div class ="row">
+            <div class ="col-md-12 caption-row">
+            <article>
+                    <input type="checkbox" id="read_more" role="button" class="btn btn-primary">
+                    <label for="read_more" onclick=""><span>See More</span><span>Hide </span></label>     
+                
+                    <section>
+                      <img src = "assets/img/uploads/image1.jpg" width="200px" height ="200px"> 
+                      <img src = "assets/img/uploads/image2.jpg" width="200px" height ="200px"> 
+                      <img src = "assets/img/uploads/image3.jpg" width="200px" height ="200px"> 
+                      <img src = "assets/img/uploads/image4.jpg" width="200px" height ="200px"> 
+                      
+                     
+                    </section> 
+                    <br>   
+                    <section>
+                        <img src = "assets/img/uploads/image6.png" width="200px" height ="200px"> 
+                        <img src = "assets/img/uploads/image7.jpg" width="200px" height ="200px"> 
+                        <img src = "assets/img/uploads/image8.jpg" width="200px" height ="200px"> 
+                        <img src = "assets/img/uploads/image5.jpg" width="200px" height ="200px"> 
+                    </section>
+                </article>
     </div>
     
-    
-    
-<div class ="row">
-        <div class ="col-md-12 caption-row">
-        <article>
-                <input type="checkbox" id="read_more" role="button" class="btn btn-primary">
-                <label for="read_more" onclick=""><span>See More</span><span>Hide </span></label>     
-            
-                <section>
-                  <img src = "assets/img/uploads/image1.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/img/uploads/image2.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/img/uploads/image3.jpg" width="200px" height ="200px"> 
-                  <img src = "assets/img/uploads/image4.jpg" width="200px" height ="200px"> 
-                  
-                 
-                </section> 
-                <br>   
-                <section>
-                    <img src = "assets/img/uploads/image6.png" width="200px" height ="200px"> 
-                    <img src = "assets/img/uploads/image7.jpg" width="200px" height ="200px"> 
-                    <img src = "assets/img/uploads/image8.jpg" width="200px" height ="200px"> 
-                    <img src = "assets/img/uploads/image5.jpg" width="200px" height ="200px"> 
-                </section>
-            </article>
-</div>
