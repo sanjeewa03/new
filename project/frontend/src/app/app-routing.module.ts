@@ -20,6 +20,9 @@ import { ImageDetailComponent } from './homepage/home/tourplane/image/image-deta
 import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
 import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
+import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
+import { PackagesComponent } from './admin/components/sidebar/packages/packages.component';
+
 
 
 
@@ -61,6 +64,10 @@ const routes: Routes = [
       //admin dashboard sidebar tourist routes
       {path:'tourist', component: TouristComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'tourist/add', component: TouristAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
+      {path:'packages', component: PackagesComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'packages/add', component: PackagesAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
 
 
       ]}]

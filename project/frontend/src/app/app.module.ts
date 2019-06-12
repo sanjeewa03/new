@@ -46,6 +46,8 @@ import { ImageFilterPipe } from './homepage/home/tourplane/image/shared/filter.p
 import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
 import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
+import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
+import {PackagesComponent} from './admin/components/sidebar/packages/packages.component';
 
 
 
@@ -97,6 +99,8 @@ export function tokenGetter() {
     CustomComponent,
     CustomizedformComponent,
     
+    PackagesAddComponent,
+    PackagesComponent
    
     
    
