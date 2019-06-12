@@ -121,12 +121,12 @@ button:focus {
   color:#12bb4a;
 }
 body{
-  background-color: #474dc5;
+  background-color: #16193a;
 }
 .contact{
   padding: 4%;
-  height: 800px;
-  margin:3rem;
+  height: 750px;
+  margin:2rem;
   border: 1px  black;
 }
 .col-md-3{

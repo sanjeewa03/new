@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -50,6 +51,7 @@ import { CustomizedformComponent } from './homepage/home/tourplane/customizedfor
 
 
 
+
 export function tokenGetter() {
   return localStorage.getItem('access_token');
 }
@@ -94,6 +96,7 @@ export function tokenGetter() {
     FormsComponent,
     CustomComponent,
     CustomizedformComponent,
+    
    
     
    
@@ -103,6 +106,7 @@ export function tokenGetter() {
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    Ng2PageScrollModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
