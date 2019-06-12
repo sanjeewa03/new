@@ -5,6 +5,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
+const multer = require('multer');
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -12,6 +14,8 @@ app.use(cors());
 
 // use JWT auth to secure the api
 app.use(jwt());
+
+app.use('/public', express.static('public'));
 
 // api routes
 app.use('/users', require('./modelsControlersAndServices/users/users.controller'));
@@ -21,6 +25,8 @@ app.use('/tourist', require('./modelsControlersAndServices/tourist/tourist.contr
 app.use('/message',require('./modelsControlersAndServices/messages/messages.controller'));
 
 app.use('/safari',require('./modelsControlersAndServices/safari/safari.controller'));
+
+app.use('/image',require('./modelsControlersAndServices/image/image.controller'));
 
 // global error handler
 app.use(errorHandler);

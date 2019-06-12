@@ -1,5 +1,4 @@
 import { Component, OnInit,Renderer2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin',
@@ -8,8 +7,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 })
 export class AdminComponent implements OnInit {
 
-  constructor( private renderer2: Renderer2,
-    @Inject(DOCUMENT) private _document) { }
+  constructor( ){ }
 
   ngOnInit() {
     /*const s = this.renderer2.createElement('script');
