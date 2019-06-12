@@ -15,7 +15,9 @@ function jwt() {
             '/hotel/addhotel',
             '/safari/addagency',
 			'/tourist/addtourist',
-			'/tourist/getall'
+            '/tourist/getall',
+            '/package/addpackage',
+            '/package/getall'
         ]
     });
 }

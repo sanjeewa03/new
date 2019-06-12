@@ -8,6 +8,7 @@ module.exports = {
 	Message:require('../modelsControlersAndServices/messages/messages.model'),
     Hotel:require('../modelsControlersAndServices/hotels/hotel.model'),
     Safari:require('../modelsControlersAndServices/safari/safari.model'),
-	Tourist:require('../modelsControlersAndServices/tourist/tourist.model')
+    Tourist:require('../modelsControlersAndServices/tourist/tourist.model'),
+    Package:require('../modelsControlersAndServices/package/package.model')
 
 };
