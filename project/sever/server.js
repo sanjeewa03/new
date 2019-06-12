@@ -25,6 +25,9 @@ app.use('/tourist', require('./modelsControlersAndServices/tourist/tourist.contr
 app.use('/message',require('./modelsControlersAndServices/messages/messages.controller'));
 
 app.use('/safari',require('./modelsControlersAndServices/safari/safari.controller'));
+app.use('/package',require('./modelsControlersAndServices/package/package.controller'));
+
+
 
 app.use('/image',require('./modelsControlersAndServices/image/image.controller'));
 

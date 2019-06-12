@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,6 +46,9 @@ import { ImageFilterPipe } from './homepage/home/tourplane/image/shared/filter.p
 import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
 import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
+import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
+import {PackagesComponent} from './admin/components/sidebar/packages/packages.component';
+
 
 
 
@@ -94,6 +98,9 @@ export function tokenGetter() {
     FormsComponent,
     CustomComponent,
     CustomizedformComponent,
+    
+    PackagesAddComponent,
+    PackagesComponent
    
     
    
@@ -103,6 +110,7 @@ export function tokenGetter() {
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    Ng2PageScrollModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

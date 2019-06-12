@@ -17,7 +17,9 @@ function jwt() {
 			'/tourist/addtourist',
             '/tourist/getall',
             '/image/',
-            '/public'
+            '/public',
+            '/package/addpackage',
+            '/package/getall'
         ]
     });
 }

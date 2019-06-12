@@ -9,6 +9,7 @@ module.exports = {
     Hotel:require('../modelsControlersAndServices/hotels/hotel.model'),
     Safari:require('../modelsControlersAndServices/safari/safari.model'),
     Tourist:require('../modelsControlersAndServices/tourist/tourist.model'),
-    Image:require('../modelsControlersAndServices/image/image.model')
+    Image:require('../modelsControlersAndServices/image/image.model'),
+    Package:require('../modelsControlersAndServices/package/package.model')
 
 };

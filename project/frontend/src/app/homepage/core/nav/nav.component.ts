@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,10 +11,20 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class NavComponent implements OnInit {
+  private fragment: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
- 
+  ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
 
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) {
+      console.log(e);
+    }
+
+}
 }

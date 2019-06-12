@@ -1,0 +1,146 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Package Details Form</div>
+                        
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+                          <div class="form-row">
+                            <div class="col form-group">
+                                <label>User Name *</label>
+                                <input type="username" #userName="ngModel" [(ngModel)]="packageService.selectedPackage.username"  name="username" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+                                <div *ngIf="signUpForm.submitted && !username.valid">
+                                   <label class="validation-message">This field is required.</label>
+                                </div>
+                            </div>
+                          </div> <br>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+                              <label>First Name * </label>
+                                <input type="text"  #firstName="ngModel" [(ngModel)]="packageService.selectedPackage.firstName" name="firstName" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+                                <div *ngIf="signUpForm.submitted && !firstName.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                              </div>
+                            <div class="col form-group">
+                              <label>Last name *</label>
+                                <input type="text"  #lastName="ngModel" [(ngModel)]="packageService.selectedPackage.lastName" name="lastName" class="form-control" placeholder=" "
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
+                                <div *ngIf="signUpForm.submitted && !lastName.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+                             <label>Email *</label>
+                              <input type="email"  #email="ngModel" [(ngModel)]="packageService.selectedPackage.email" name="email" class="form-control" placeholder=" "
+                              required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+                              <div *ngIf="signUpForm.submitted && !email.valid">
+                                <label class="validation-message">This field is required.</label>
+                              </div>
+                            </div>
+
+                            <div class="col form-group">
+                              <label>Birth Day</label>
+                                <input type="date" #birthDate="ngModel" [(ngModel)]="packageService.selectedPackage.birthDate" name="birthDate" placeholder="MM/DD/YYYY" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !birthDate.valid }">
+                                <div *ngIf="signUpForm.submitted && !birthDate.valid">
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" value="male" #gender="ngModel" [(ngModel)]="packageService.selectedPackage.gender"
+                              required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+                              <div *ngIf="signUpForm.submitted && !gender.valid">
+                              </div>
+                              <span class="form-check-label"> Male </span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="female" #gender="ngModel" [(ngModel)]="packageService.selectedPackage.gender"
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !gender.valid }">
+                                <div *ngIf="signUpForm.submitted && !gender.valid">
+                                </div>
+                              <span class="form-check-label"> Female</span>
+                            </label>
+                          </div>
+
+                          <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+		  
+    	                          <input name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="packageService.selectedPackage.phoneNumber" class="form-control" placeholder="Phone number" type="text"
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
+                                <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col form-group">
+		                          <label>Nationality *</label>
+		                            <select id="inputState" #nationality="ngModel" [(ngModel)]="packageService.selectedPackage.nationality" name="nationality" class="form-control" placeholder=""
+                                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">
+                                <div *ngIf="signUpForm.submitted && !nationality.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div>
+                                  <option value="England">England</option>
+                                  <option value="Russia">Russia</option>
+                                  <option  value="United States" selected>United States</option>
+                                  <option value="India">India</option>
+                                  <option value="Afganistan">Afganistan</option>
+                                  <option value="China">China</option>
+                                  <option value="Denmark">Denmark</option>
+                                  <option value="Brazil">Brazil</option>
+                                  <option value="France">France</option>
+                                  <option value="Pakistan">Pakistan</option>
+                                  <option value="Australia">Australia</option>
+                                </select>
+                            </div>
+                          </div> <br>
+
+                            <div class="form-group">
+                              <label>Create Password *</label>
+                                <input class="form-control"  type="password" #password="ngModel" [(ngModel)]="packageService.selectedPackage.password" name="password" placeholder="Password"
+                                minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+                                <div *ngIf="signUpForm.submitted && password.errors">
+                                  <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+                                  <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            <label>Confirm Password *</label>
+                              <input class="form-control" type="password"  name="password2" placeholder="Password"
+                              minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !passwordNew.valid }">
+                              <div *ngIf="signUpForm.submitted && passwordNew.errors">
+                                <label *ngIf="passwordNew.errors.required" class="validation-message">This field is required.</label>
+                                <label *ngIf="passwordNew.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-block" value="Register">
+                            </div>
+                             <p><small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our  Terms of use and Privacy Policy.</small> </p>
+                        </form> 
+                      </div>                     
+                    </div>  
+        </div>

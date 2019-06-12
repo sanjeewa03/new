@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<router-outlet></router-outlet>
+
+<div class="btn-toolbar">
+    <button href="#" class="btn btn-warning"><i class="fa fa-paw"></i> Package Dashboard</button>
+    <a href="/admin/packages/add" class="btn btn-success aligh-right"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span> <strong>ADD</strong></a>
+    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+    <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+    <span class="input-group-btn">
+        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+    </span>
+</div>
+
+<div class="well">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+       
+        <!-- username Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+      
+        <!-- firstName Column -->
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef> First Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+
+        <!-- lastName Column -->
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+      
+        <!-- birthdate Column -->
+        <ng-container matColumnDef="birthDate">
+            <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+            <td mat-cell *matCellDef="let element"> {{element.birthDate}} </td>
+          </ng-container>
+
+        <!-- gender Column -->
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+          </ng-container>
+
+        <!-- phoneNumber Column -->
+        <ng-container matColumnDef="phoneNumber">
+            <th mat-header-cell *matHeaderCellDef> Tel-Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+          </ng-container>
+
+        <!-- nationality Column -->
+        <ng-container matColumnDef="nationality">
+            <th mat-header-cell *matHeaderCellDef> Nationality </th>
+            <td mat-cell *matCellDef="let element"> {{element.nationality}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+   <!-- <table class="table">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>E-mail</th>
+          <th>Telephone</th>
+          <th>Birth Date</th>
+          <th>Gender</th>
+          <th>Nationality</th>
+          <th>Password</th>
+          
+          
+          <th></th>
+                                   
+
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> {{ data.username }}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+         
+             
+          <td>
+              <a href="user.html"><i class="glyphicon glyphicon-edit"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          <td>
+            <a href="user.html"><i class="glyphicon glyphicon-edit"></i></a>
+            <a href="#myModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
+          </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+           
+          <td>
+            <a href="user.html"><i class="glyphicon glyphicon-edit"></i></a>
+            <a href="#myModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
+          </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          <td>
+            <a href="user.html"><i class="glyphicon glyphicon-edit"></i></a>
+            <a href="#myModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>-->
+</div>
+<div class="pagination">
+    <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</div>
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Are you sure you want to delete the user?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+    </div>
+</div>
+
+</body>
+</html>
+

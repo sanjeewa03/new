@@ -1,24 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const touristService = require('./tourist.service');
+const packageService = require('./package.service');
 const authorize = require('_helpers/authorize')
 const Role = require('_helpers/role');
 
-router.post('/addtourist',addTourist);
+router.post('/addpackage',addPackage);
 router.get('/getall',getAll)
 
 module.exports = router;
 
-function addTourist(req, res, next) {
-    console.log("inside tourist add func");
-    touristService.create(req.body)
+function addPackage(req, res, next) {
+    console.log("inside package add func");
+    packageService.create(req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
 
 function getAll(req, res, next) {
-	console.log("tourist controller ");
-    touristService.getAll()
-        .then(tourist => res.json(tourist))
+	console.log("package controller get all ");
+    packageService.getAll()
+        .then(package => res.json(package))
         .catch(err => next(err));
 }
