@@ -49,6 +49,7 @@ import { CustomizedformComponent } from './homepage/home/tourplane/customizedfor
 import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
 import {PackagesComponent} from './admin/components/sidebar/packages/packages.component';
 import { TownComponent } from './homepage/home/explora/town/town.component';
+import { PassengerPickupComponent } from './admin/components/sidebar/passenger-pickup/passenger-pickup.component';
 
 
 
@@ -102,7 +103,8 @@ export function tokenGetter() {
     
     PackagesAddComponent,
     PackagesComponent,
-    TownComponent
+    TownComponent,
+    PassengerPickupComponent
    
     
    
