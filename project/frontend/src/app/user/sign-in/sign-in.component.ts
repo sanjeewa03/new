@@ -26,6 +26,7 @@ export class SignInComponent implements OnInit {
       res => {
         localStorage.setItem('token', res.token);
         localStorage.setItem('time', String(Date.now()) );
+        localStorage.setItem('isLogedIn', "true");
         if(res){
           if(res.role){
             if(res.role=="Admin"){
