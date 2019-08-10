@@ -46,7 +46,20 @@
 
     
 
-    <ul id ="thumbnailsList">
+    <div class="card-columns" id="ex-2">
+            <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages | imageFilter:filterBy">
+                <a [routerLink]="['/image',image.id]">  
+               <img class="card-img-top" src="{{image.url}}"  height="150px" width="100px" alt="Card image cap" >
+               </a>
+               <div class="card-body">
+                  <h5 class="card-title">{{image.title}}</h5>
+                  <p class="card-text">{{image.category}}</p>
+                </div>
+        
+              </div>
+            </div>
+
+    <!--<ul id ="thumbnailsList">
         <li *ngFor="let image of visibleImages | imageFilter:filterBy"> 
             <a [routerLink]="['/image',image.id]">
             <img src="{{image.url}}" class="tn" width="200" height="160" >
@@ -56,5 +69,5 @@
             
         </li>
     
-    </ul>
+    </ul>-->
 </div>

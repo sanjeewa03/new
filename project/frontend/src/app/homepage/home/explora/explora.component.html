@@ -7,7 +7,17 @@
       <hr>
     </h2 >
     <div class="card-group" id="ex-1" >
-      <div class="card" data-aos="zoom-in" >
+        <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages1 | imageFilter:filterBy">
+            <a [routerLink]="['/image',image.id]">  
+           <img class="card-img-top" src="{{image.url}}"  height="150px" width="100px" alt="Card image cap" >
+           </a>
+           <div class="card-body">
+              <h5 class="card-title">{{image.title}}</h5>
+              <p class="card-text">{{image.category}}</p>
+            </div>
+    
+          </div>
+     ,<!--  <div class="card" data-aos="zoom-in" >
         <img class="card-img-top" src="http://localhost:4000/anuradhapura.jpg" height="150px" width="100px" alt="Card image cap" >
         <div class="card-body">
           <h5 class="card-title">Anuradhapura</h5>
@@ -30,11 +40,23 @@
           <p class="card-text">Ancient | Religious | Historical</p>
         </div>
 
-      </div>
+      </div>-->
      
     </div>
    <!-- start of ex 2 -->
+   
     <div class="card-group" id="ex-2">
+        <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages2 | imageFilter:filterBy">
+            <a [routerLink]="['/image',image.id]">  
+           <img class="card-img-top" src="{{image.url}}"  height="150px" width="100px" alt="Card image cap" >
+           </a>
+           <div class="card-body">
+              <h5 class="card-title">{{image.title}}</h5>
+              <p class="card-text">{{image.category}}</p>
+            </div>
+    
+          </div>
+      <!-- 
       <div class="card" data-aos="zoom-in">
         <img class="card-img-top" src="http://localhost:4000/galle.jpg" height="150px" width="100px" alt="Card image cap" >
         <div class="card-body">
@@ -59,6 +81,7 @@
         </div>
 
       </div>
+      --> 
     </div>
 
 
