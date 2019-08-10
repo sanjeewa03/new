@@ -1,29 +1,7 @@
-<!--header--->
-<nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
-    <img class="navbar-brand" src="assets/img/logo.png" id="logo_custom" width="8%"  alt="logo">
-       <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-           <span class="navbar-toggler-icon "></span>
-       </button>
-         <div class="collapse navbar-collapse " id="collapsibleNavbar">
-             <ul class="navbar-nav ml-auto ">
-               <li class="nav-item">
-                <h1>Sri Lanka Day <span class="a">  Tour Packages </span></h1>
-               </li>
-               
-             </ul>
-             <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" >
-                    <div class="input-group-btn">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-         </div>  
-</nav>
-<br><br><br><br><br><br><br>
+<app-nav></app-nav>
+  
+  
+<br><br><br><br>
 
  <!--galary--->
  <div class="border-top card-body text-right"><a [routerLink]="['/home']">HOME</a></div>       
@@ -40,11 +18,11 @@
        
 <div class="row">
 
-    <button type="button" style="margin:5px;"class="btn btn-primary" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
-    <button type="button" style="margin:5px;" class="btn btn-warning" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
-    <button type="button" style="margin:5px;" class="btn btn-success" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button>
+    <button type="button" style="margin:5px;"class="btn btn" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button>
 
-    
+    <br>
 
     <div class="card-columns" id="ex-2">
             <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages | imageFilter:filterBy">
