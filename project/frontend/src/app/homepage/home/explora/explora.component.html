@@ -9,7 +9,7 @@
     <div class="card-group" id="ex-1" >
         <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages1 | imageFilter:filterBy">
             <a [routerLink]="['/image',image.id]">  
-           <img class="card-img-top" src="{{image.url}}"  height="150px" width="100px" alt="Card image cap" >
+           <img class="card-img-top" src="{{image.url}}"  height="180px" width="120px" alt="Card image cap" >
            </a>
            <div class="card-body">
               <h5 class="card-title">{{image.title}}</h5>
@@ -48,7 +48,7 @@
     <div class="card-group" id="ex-2">
         <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages2 | imageFilter:filterBy">
             <a [routerLink]="['/image',image.id]">  
-           <img class="card-img-top" src="{{image.url}}"  height="150px" width="100px" alt="Card image cap" >
+           <img class="card-img-top" src="{{image.url}}"  height="180px" width="120px" alt="Card image cap" >
            </a>
            <div class="card-body">
               <h5 class="card-title">{{image.title}}</h5>
