@@ -22,6 +22,8 @@ import { CustomComponent } from './homepage/home/tourplane/custom/custom.compone
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
 import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
 import { PackagesComponent } from './admin/components/sidebar/packages/packages.component';
+import { PlacesComponent } from './admin/components/sidebar/places/places.component';
+import { PlacesAddComponent } from './admin/components/sidebar/places/places-add/places-add.component';
 
 
 
@@ -56,6 +58,12 @@ const routes: Routes = [
       //admin dashboard sidebar hotel routes
       {path:'hotel', component: HotelComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'hotel/add', component: HotelAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      
+      
+      //admin dashboard sidebar places routes
+      {path:'place', component: PlacesComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'place/add', component: PlacesAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+
 
       //admin dashboard sidebar safari routes
       {path:'safari-agency', component: SafariAgencyComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},

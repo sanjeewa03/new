@@ -203,6 +203,7 @@
     width: calc((100% - 30px) / 2);
   }
   
+  
   @media (max-width: 767px) {
     .col-2 {
       width: 100%;

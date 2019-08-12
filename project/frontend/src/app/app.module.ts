@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import {MatListModule} from '@angular/material/list';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -50,6 +52,10 @@ import { PackagesAddComponent } from './admin/components/sidebar/packages/packag
 import {PackagesComponent} from './admin/components/sidebar/packages/packages.component';
 import { TownComponent } from './homepage/home/explora/town/town.component';
 import { PassengerPickupComponent } from './admin/components/sidebar/passenger-pickup/passenger-pickup.component';
+import { MapComponent } from './homepage/home/map/map.component';
+import { HotelViewComponent } from './admin/components/sidebar/hotel/hotel-view/hotel-view.component';
+import { PlacesComponent } from './admin/components/sidebar/places/places.component';
+import { PlacesAddComponent } from './admin/components/sidebar/places/places-add/places-add.component';
 
 
 
@@ -104,7 +110,11 @@ export function tokenGetter() {
     PackagesAddComponent,
     PackagesComponent,
     TownComponent,
-    PassengerPickupComponent
+    PassengerPickupComponent,
+    MapComponent,
+    HotelViewComponent,
+    PlacesComponent,
+    PlacesAddComponent
    
     
    
@@ -123,6 +133,7 @@ export function tokenGetter() {
       }
     }),
     MatTableModule,
+    MatListModule,
     MatPaginatorModule
   ],
   providers: [],
