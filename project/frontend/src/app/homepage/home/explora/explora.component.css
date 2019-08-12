@@ -8,8 +8,10 @@
 
 /* start of explore */
 
-.explore {
-    margin-top: 100px;
+.card-group{
+    margin-top: 5px;
+    width:100%;
+    Height:120%
 }
 
 .explore h2 {
@@ -33,24 +35,25 @@
 .a {
     color:#12bb4a;
 }
-.accomodation_item {
+.card-img-top {
     margin-bottom: 30px;
   }
   
-  .accomodation_item .hotel_img {
+  .card-img-top {
     position: relative;
     margin-bottom: 10px;
     overflow: hidden;
     border-radius: 10px;
+    padding:2px;
   }
   
-  .accomodation_item .hotel_img img {
+  .card-img-top {
     -webkit-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;
   }
   
-  .accomodation_item .hotel_img .theme_btn {
+  .card_group .img .theme_btn {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -61,13 +64,13 @@
     max-width: 128px;
   }
   
-  .accomodation_item .hotel_img:hover img {
+  .card_item .hotel_img:hover img {
     -webkit-transform: scale(1.19);
     -ms-transform: scale(1.19);
     transform: scale(1.19);
   }
   
-  .accomodation_item h5 {
+  .card_item h5 {
     font-size: 24px;
     line-height: 28px;
     color: #52c5fd;
@@ -75,9 +78,16 @@
     margin-bottom: 0px;
   }
   
-  .accomodation_item h5 small {
+  .card_item h5 small {
     font-weight: 300;
     font-size: 14px;
+  }
+  .card{
+    padding:8px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
   }
   
   .sec_h4 {
@@ -88,11 +98,11 @@
     margin-bottom: 0px;
   }
   
-  .accomodation_two {
+  .card_two {
     margin-bottom: -40px;
   }
   
-  .accomodation_two .accomodation_item {
+  .card_two .card_item {
     margin-bottom: 45px;
   }
   /*font Variables*/

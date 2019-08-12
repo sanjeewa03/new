@@ -1,0 +1,51 @@
+<app-nav></app-nav>
+  
+  
+<br><br><br><br>
+
+ <!--galary--->
+ <div class="border-top card-body text-right"><a [routerLink]="['/home']">HOME</a></div>       
+<h2><b>Explore Your Safari journey Around Sri Lanka</b></h2>
+        <article>
+            <section>
+                <p>Use <b>Backpacking Sri Lanka</b> to choose the best safari agencies to have a wonderful and safe journey around the island.You'll be astounded by tthe experience. Add the incredibly authentic experience of travesing around Island</p>
+            </section>    
+            <section>
+                <p> </p>
+            </section>
+        </article>
+    
+       
+<!----div class="row">
+
+    <button type="button" style="margin:5px;"class="btn btn" [class.active]="filterBy=='all'" (click)="filterBy='all'">TOUR PACKAGES </button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='galle'" (click)="filterBy='galle'">DAY TOURS</button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='matara'" (click)="filterBy='matara'">MULTI DAY TOUS</button---->
+
+    
+
+    <div class="card-columns" id="ex-2">
+            <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages | imageFilter:filterBy">
+                <a [routerLink]="['/Safariimage',image.id]">  
+               <img class="card-img-top" src="{{image.url}}"  height="200px" width="150px" alt="Card image cap" >
+               </a>
+               <div class="card-body">
+                  <h5 class="card-title">{{image.title}}</h5>
+                  <p class="card-text">{{image.category}}</p>
+                </div>
+        
+              </div>
+            </div>
+
+    <!--<ul id ="thumbnailsList">
+        <li *ngFor="let image of visibleImages | imageFilter:filterBy"> 
+            <a [routerLink]="['/image',image.id]">
+            <img src="{{image.url}}" class="tn" width="200" height="160" >
+            
+      
+            </a>
+            
+        </li>
+    
+    </ul>-->
+

@@ -1,0 +1,59 @@
+<app-nav></app-nav>
+<br><br><br><br><br><br>
+<div class="row">
+        <div class ="col-md-12">
+            <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
+           
+        </div>
+        
+        <div class ="row">
+                <div class ="col-md-12" >
+                
+                <section>
+                    <div [ngStyle]="{'background-image':'url('+image.url1+')'}" class="img-container1" ></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url2+')'}" class="img-container1"></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url3+')'}" class="img-container1"></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url4+')'}" class="img-container1"></div>
+                </section>
+                <section>
+                    <div [ngStyle]="{'background-image':'url('+image.url5+')'}" class="img-container1"></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url6+')'}" class="img-container1"></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url7+')'}" class="img-container1"></div>
+                    <div [ngStyle]="{'background-image':'url('+image.url8+')'}" class="img-container1"></div>
+                </section>
+               
+            </div>  
+        </div>
+   
+    </div>
+   
+    <div class="split right">
+        <br><br><br>
+            <div class="header">
+                    <span id="header">
+                            {{image.header}}
+                        </span>
+            </div>
+            <br>
+            <div class="title">
+                    <span id="title">
+                            {{image.title}}
+                        </span>
+            </div>
+            <br>
+            
+            <div class="row">
+                    <div class = "description">
+                        <span id="caption">
+                            {{image.caption}}
+                        </span>
+                        </div>
+                </div>
+            <button [routerLink]="['/forms']" class="button btn-primary" [class.active]="filterBy=='all'" (click)="filterBy='all'">Plan Your Tour </button><br><br>
+            <div class="border-top card-body text-center"><a [routerLink]="['/home']">BACKPACKING SRI LANKA</a></div>
+        </div>
+        
+        
+        
+    
+    

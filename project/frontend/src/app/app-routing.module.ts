@@ -26,6 +26,8 @@ import { PlacesComponent } from './admin/components/sidebar/places/places.compon
 import { PlacesAddComponent } from './admin/components/sidebar/places/places-add/places-add.component';
 
 
+import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
+import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
 
 
 
@@ -99,6 +101,10 @@ const routes: Routes = [
    {path: "custom",component:CustomComponent 
 },
     {path: "customizedform",component:CustomizedformComponent 
+},
+    {path: "galary1",component:Galary1Component 
+},
+{ path: "Safariimage/:id",component:Image1Component 
 },
 ];
 

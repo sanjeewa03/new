@@ -4,6 +4,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {MatListModule} from '@angular/material/list';
 
+import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,6 +57,11 @@ import { MapComponent } from './homepage/home/map/map.component';
 import { HotelViewComponent } from './admin/components/sidebar/hotel/hotel-view/hotel-view.component';
 import { PlacesComponent } from './admin/components/sidebar/places/places.component';
 import { PlacesAddComponent } from './admin/components/sidebar/places/places-add/places-add.component';
+import { AvailabilityComponent } from './homepage/home/tourplane/availability/availability.component';
+import { SafariplaneComponent } from './homepage/home/safariplane/safariplane.component';
+import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
+import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
+
 
 
 
@@ -106,7 +112,6 @@ export function tokenGetter() {
     FormsComponent,
     CustomComponent,
     CustomizedformComponent,
-    
     PackagesAddComponent,
     PackagesComponent,
     TownComponent,
@@ -114,8 +119,12 @@ export function tokenGetter() {
     MapComponent,
     HotelViewComponent,
     PlacesComponent,
-    PlacesAddComponent
-   
+    PlacesAddComponent,   
+    AvailabilityComponent,
+    SafariplaneComponent,
+    Galary1Component,
+    Image1Component,
+    
     
    
   ],
