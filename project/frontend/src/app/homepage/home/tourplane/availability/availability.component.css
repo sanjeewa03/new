@@ -9,6 +9,13 @@
 .section {
 	position: relative;
 	height: 100vh;
+	background-image: url(https://wallpapercave.com/wp/wp1903469.jpg) ;
+	
+	height: 1000px; 
+	background-position: center;
+	 background-repeat: no-repeat; 
+	background-size: cover; 
+	opacity:0.2px;
 }
 
 .section .section-center {
@@ -39,6 +46,7 @@
 .booking-form .form-group {
 	position: relative;
 	margin-bottom: 0px;
+	
 }
 
 .booking-form>form .row.no-margin {
@@ -52,7 +60,7 @@
 }
 
 .booking-form .form-control {
-	background-color: #101720;
+	background-color: #0ac476;
 	border-radius: 0px;
 	border: none;
 	font-size: 18px;
@@ -113,7 +121,7 @@
 }
 
 .booking-form .form-label {
-	color: #fff;
+	color: rgb(8, 8, 8);
 	display: block;
 	font-weight: 400;
 	position: absolute;
@@ -140,7 +148,7 @@
 
 .booking-form .submit-btn {
 	color: #fff;
-	background-color: #061d30;
+	background-color: #023a2e;
 	font-weight: 700;
 	border: none;
 	display: block;
@@ -152,16 +160,15 @@
 	transition: 0.2s all;
 }
 .list{
-	background-color: #29292b;
+	background-color: #6df5b5;
 	font-size: 12px;
-	color: #fff;
+	color: rgb(17, 17, 17);
 	padding:2px;
 	
 }
 
 .btn {
-	color: #fff;
-	background-color: #b1be97;
+	background-color: #053b10;
 	font-weight: 700;
 	border: none;
 	display: block;
@@ -171,6 +178,9 @@
 	text-transform: capitalize;
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
+ 	color: #000;
+
+
 }
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
@@ -186,10 +196,10 @@
 	font-size: 58px;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #1a1e24;
+	color: #0d0d0e;
 }
 
 .booking-cta p {
 	font-size: 16px;
-	color: #1a1e24;
+	color: #070707;
 }

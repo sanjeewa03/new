@@ -8,8 +8,10 @@
 
 /* start of explore */
 
-.explore {
-    margin-top: 100px;
+.card-group{
+    margin-top: 5px;
+    width:100%;
+    Height:120%
 }
 
 .explore h2 {

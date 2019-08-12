@@ -53,9 +53,10 @@ import {PackagesComponent} from './admin/components/sidebar/packages/packages.co
 import { TownComponent } from './homepage/home/explora/town/town.component';
 import { PassengerPickupComponent } from './admin/components/sidebar/passenger-pickup/passenger-pickup.component';
 import { AvailabilityComponent } from './homepage/home/tourplane/availability/availability.component';
-import { PlaceComponent } from './homepage/home/tourplane/forms/place/place.component';
-import { BookingsComponent } from './homepage/home/tourplane/forms/bookings/bookings.component';
-import { SafariesComponent } from './homepage/home/tourplane/forms/safaries/safaries.component';
+import { SafariplaneComponent } from './homepage/home/safariplane/safariplane.component';
+import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
+import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
+
 
 
 
@@ -106,16 +107,15 @@ export function tokenGetter() {
     FormsComponent,
     CustomComponent,
     CustomizedformComponent,
-    
     PackagesAddComponent,
     PackagesComponent,
     TownComponent,
     PassengerPickupComponent,
     AvailabilityComponent,
-    PlaceComponent,
-    BookingsComponent,
-    SafariesComponent
-   
+    SafariplaneComponent,
+    Galary1Component,
+    Image1Component,
+    
     
    
   ],
