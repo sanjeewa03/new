@@ -27,11 +27,19 @@
                           <li class="nav-item"><a class="nav-link" href="blog-single.html">Safari</a></li>
                       </ul>
                   </li--> 
-                  <li class="nav-item">
+                  <li class="nav-item" *ngIf="logedIn; else elseBlock">
+                        <form #signOutForm="ngForm" (ngSubmit)="signOutForm.valid && onSubmit(signOutForm)">
+                        <button  class="btn btn-outline-success" type="submit"  value="Sign Out" >Sign Out</button>
+                        </form>
+                </li>
+                <ng-template #elseBlock>
+                  <li class="nav-item" >
                       <a [routerLink]="['/signup']" class="btn btn-outline-success btn-group-lg" role="group" style="margin:5px;" >Sign Up</a>
                       
                       <a [routerLink]="['/signin']" class="btn btn-outline-success" style="margin:5px;">Sign In</a>
                   </li>
+                </ng-template>
+                  
               </ul>
           </div> 
       </nav>
