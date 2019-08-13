@@ -5,37 +5,46 @@
         <span id="header">
             {{image.header}}   
         </span><br>
+        <div class="header1">
         <span id="address">
             {{image.address}}   
-        </span><br>
+        </span>
+        </div>
+        <div class="header2">
         <span id="review">
             {{image.review}}   
         </span>
+        </div>
+        <div class="header3">
+                <span id="price">
+                    {{image.price}}   
+                </span>
+    </div>
     </div>
    
     <div class ="row">
+            <div class ="col-md-12" >
         <div class = "description">
-        <span id="caption">
-                <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
-        <div class ="col-md-12" >
+        
+                <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container" ></div>
+       
         <section>
-            <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container"></div>
             <div [ngStyle]="{'background-image':'url('+image.url1+')'}" class="img-container1" ></div>
             <div [ngStyle]="{'background-image':'url('+image.url2+')'}" class="img-container1"></div>
             <div [ngStyle]="{'background-image':'url('+image.url3+')'}" class="img-container1"></div>
-            <div [ngStyle]="{'background-image':'url('+image.url4+')'}" class="img-container1"></div>
 
         </section>
-        </div>
-        <span style="border: 1px solid rgba(0,0,0,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);" class="btn btn-success btn-lg" [routerLink]="['/forms']"  [class.active]="filterBy=='all'" (click)="filterBy='all'"><i class="glyphicon glyphicon-ok">Plan Your Tour </i></span>
-
-        </span>
-
+        
     </div>
-</div>
-<div class="row">
-    <div class="border-top card-body text-center"><a [routerLink]="['/home']">BACKPACKING SRI LANKA</a></div>
-</div>
+    </div>
+     
+    <app-check></app-check>
+      
+        
+        
+
+
+
 
      
         
