@@ -33,6 +33,11 @@ import {ViewRoomsComponent} from './bookings/view-rooms/view-rooms.component';
 import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
 import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
 import { from } from 'rxjs';
+import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
+import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
+import { AccomadationplaneComponent } from './homepage/home/accomadation/accomadationplane/accomadationplane.component';
+import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.component';
+import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
 
 
 
@@ -119,7 +124,7 @@ const routes: Routes = [
   
   { path: "image/:id",component:ImageDetailComponent 
 },
-  { path: "forms",component:FormsComponent 
+  { path: "forms/:id",component:FormsComponent 
 },
    {path: "custom",component:CustomComponent 
 },
@@ -128,6 +133,12 @@ const routes: Routes = [
     {path: "galary1",component:Galary1Component 
 },
 { path: "Safariimage/:id",component:Image1Component 
+},
+{path: "accomadationplane",component:AccomadationplaneComponent
+},
+{path: "galary2",component:Galary2Component 
+},
+{ path: "Hotelimage/:id",component:Image2Component 
 },
 ];
 
