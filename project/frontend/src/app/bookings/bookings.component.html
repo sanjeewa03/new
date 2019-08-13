@@ -1,0 +1,113 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+          
+          <a class="nav-link" [routerLink]="['/bookings']" class="list-group-item list-group-item-action active">Bookings</a>
+          
+          <a class="nav-link"  (click)="clicked= !clicked" class="list-group-item list-group-item-action ">Rooms</a>
+          <ul *ngIf="clicked">
+            
+              <li><a [routerLink]="['/addrooms']"><span class="fa fa-user"></span>Add Room Details</a></li>
+              <li><a [routerLink]="['/viewrooms']"><span class="fa fa-user"></span>View Room Details</a></li>
+              <li><a [routerLink]="['/editrooms']"><span class="fa fa-user"></span>Edit Room Details </a></li>
+             
+              
+              
+          </ul>
+          <a class="nav-link" [routerLink]="['/accountManagement']"class="list-group-item list-group-item-action ">Account Management</a>
+          
+
+              
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <h4> Booking Details</h4>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+                        <div class="container">
+                          
+                              <div class="row">
+                              <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">Booking Holders</h3>
+                                    <div class="pull-right">
+                                      <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                                        <i class="glyphicon glyphicon-filter"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="panel-body">
+                                    <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Bookings" />
+                                  </div>
+                                  <table class="table table-hover" id="dev-table">
+                                    <thead>
+                                      <tr>
+                                        <th>#</th>
+                                        <th> Name</th>
+                                        <th>Check In</th>
+                                        <th>Check Out</th>
+                                        <th>Payment</th>
+                                        <th>Phone</th>
+                                        <th>Room Type</th>
+
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td>2</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>Bob</td>
+                                        <td>Loblaw</td>
+                                        <td>boblahblah</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Holden</td>
+                                        <td>Caulfield</td>
+                                        <td>penceyreject</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>

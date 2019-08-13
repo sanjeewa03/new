@@ -8,9 +8,8 @@
 
 .img-container{
     margin: 10px;
-    min-height: 50%;
     width:100%;
-    height:25%;
+    height:250px;
     background-position: center;
     background-repeat: no-repeat;
     align-content: center;
@@ -29,7 +28,7 @@
    
 }
 .row{
-  padding:16px;
+  padding:1px;
 }
 
 #caption{
@@ -45,6 +44,24 @@
   padding: 18px;
   color: #222;
   
+}
+.header1{
+  font-size: 22px;
+  font-family:sans-serif;
+  padding: 8px;
+  color: rgb(21, 21, 116);
+  
+}.header2{
+  font-size: 22px;
+  font-family:sans-serif;
+  padding: 8px;
+  color: rgb(7, 136, 97);
+
+}.header3{
+  font-size: 28px;
+  font-family:sans-serif;
+  padding: 8px;
+  color: rgb(224, 38, 38);
 }
 #title{
     font-size:25px;
@@ -140,16 +157,15 @@
   }
   .description{
     background-color: rgb(250, 248, 248);
-    width: 350px;
+    width: 850px;
     height: 500px;
     border: 1px solid rgb(21, 7, 37);
-    padding: 20px;
-    margin: 20px;
+    
   }
   .description1{
     background-color: rgb(250, 248, 248);
-    width: 650px;
-    height: 400px;
+    width: 1550px;
+    height: 500px;
     border: 1px solid rgb(21, 7, 37);
     padding: 20px;
     margin: 20px;
@@ -170,9 +186,9 @@
     color: white;
   }
   .button {
-    background-color:;
-    border: none;
-    color: rgb(7, 7, 7);
+   width:25%;
+   height:25%;
+    
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
