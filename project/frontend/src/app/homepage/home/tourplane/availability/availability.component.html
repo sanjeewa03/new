@@ -102,6 +102,11 @@
         <div>
                 <agm-map [latitude]="lat" [longitude]="lng">
                         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                      </agm-map>  
+                <agm-direction [origin]="origin" [destination]="destination"  [waypoints]="waypoints" [travelMode]="'DRIVING'">
+                </agm-direction>
+                </agm-map>  
+                <!-- <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+                </agm-map> -->
         </div>
 </body>        
