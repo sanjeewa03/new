@@ -72,7 +72,7 @@ const upload = multer({storage: storage,
 
 
 router.post("/", upload.single('productImage'),(req,res,next) =>{
-	console.log(req);
+	console.log(req.body);
 	const product = new Image({
 	_id: new mongoose.Types.ObjectId(),
 	productImage: req.file.path ,

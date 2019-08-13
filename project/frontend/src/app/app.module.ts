@@ -5,6 +5,7 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
@@ -175,6 +176,7 @@ export function tokenGetter() {
       apiKey: 'AIzaSyCcIWFonog_hbWAXEwDBirNLXU4W2LBYy4'
     }),
     AgmDirectionModule,
+    AngularFileUploaderModule
     
   ],
   providers: [],
