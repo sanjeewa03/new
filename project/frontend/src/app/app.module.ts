@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-
+import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -61,6 +63,7 @@ import { AvailabilityComponent } from './homepage/home/tourplane/availability/av
 import { SafariplaneComponent } from './homepage/home/safariplane/safariplane.component';
 import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
 import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
+
 
 
 
@@ -124,6 +127,7 @@ export function tokenGetter() {
     SafariplaneComponent,
     Galary1Component,
     Image1Component,
+
     
     
    
@@ -143,7 +147,13 @@ export function tokenGetter() {
     }),
     MatTableModule,
     MatListModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCcIWFonog_hbWAXEwDBirNLXU4W2LBYy4'
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

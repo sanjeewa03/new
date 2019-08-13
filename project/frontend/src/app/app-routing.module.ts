@@ -96,7 +96,7 @@ const routes: Routes = [
   },
   { path: "image/:id",component:ImageDetailComponent 
 },
-  { path: "forms",component:FormsComponent 
+  { path: "forms/:id",component:FormsComponent 
 },
    {path: "custom",component:CustomComponent 
 },
