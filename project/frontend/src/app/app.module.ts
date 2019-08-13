@@ -70,6 +70,12 @@ import { SearchComponent } from './homepage/home/accomadation/search/search.comp
 import { CheckComponent } from './homepage/home/accomadation//check/check.component';
 
 
+import { AccountManagementComponent } from './bookings/account-management/account-management.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
+import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
+import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
+
 
 
 
@@ -132,6 +138,11 @@ export function tokenGetter() {
     SafariplaneComponent,
     Galary1Component,
     Image1Component,
+    AccountManagementComponent,
+    BookingsComponent,
+    ViewRoomsComponent,
+    AddRoomsComponent,
+    EditRoomsComponent,
     AccomadationplaneComponent,
     Galary2Component,
     Image2Component,
