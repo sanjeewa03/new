@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+  
+  
+<br><br><br><br><br><br><br><br>
+<app-search></app-search>
+<br>
+
+ <div class="section_title"><h1>Accomadations- More than a stay</h1></div>
+<div class="section_text">Choose your accomadation plan based on our unlimited packages. Backpacking Sri Lanka will give you the most comfortable and Economical offers for you</div>    
+  <br><br>
+ 
+
+        
+  <div class="row">
+    <button type="button" style="margin:5px;"class="btn btn-primary" [class.active]="filterBy=='any'" (click)="filterBy='any'">ALL </button>
+    <button type="button" style="margin:5px;"class="btn btn" [class.active]="filterBy=='luxury'" (click)="filterBy='luxury'">LUXURY </button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='economical'" (click)="filterBy='economical'">ECONOMICAL</button>
+    <button type="button" style="margin:5px;" class="btn btn" [class.active]="filterBy=='reasonable'" (click)="filterBy='reasonable'">REASONABLE</button>
+
+    <br><br><br>
+
+    <div class="card-columns" id="ex-2">
+            <div class="card" data-aos="zoom-in"*ngFor="let image of visibleImages | imageFilter:filterBy">
+                <a [routerLink]="['/Hotelimage',image.id]">  
+               <img class="card-img-top" src="{{image.url}}"  height="200px" width="150px" alt="Card image cap" >
+               </a>
+               <div class="card-body">
+                  <h5 class="card-title">{{image.title}}</h5>
+                  <p class="card-text">{{image.category}}</p>
+                </div>
+        
+              </div>
+            </div>
+
+    <!--<ul id ="thumbnailsList">
+        <li *ngFor="let image of visibleImages | imageFilter:filterBy"> 
+            <a [routerLink]="['/image',image.id]">
+            <img src="{{image.url}}" class="tn" width="200" height="160" >
+            
+      
+            </a>
+            
+        </li>
+    
+    </ul>-->
+
