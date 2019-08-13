@@ -62,6 +62,12 @@ import { SafariplaneComponent } from './homepage/home/safariplane/safariplane.co
 import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
 import { Image1Component } from './homepage/home/safariplane/image1/image1.component';
 
+import { AccountManagementComponent } from './bookings/account-management/account-management.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
+import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
+import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
+
 
 
 
@@ -124,6 +130,11 @@ export function tokenGetter() {
     SafariplaneComponent,
     Galary1Component,
     Image1Component,
+    AccountManagementComponent,
+    BookingsComponent,
+    ViewRoomsComponent,
+    AddRoomsComponent,
+    EditRoomsComponent,
     
     
    
