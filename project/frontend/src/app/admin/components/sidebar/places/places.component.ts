@@ -28,7 +28,7 @@ export interface dataInterface {
 export class PlacesComponent implements OnInit {
 
   data: dataInterface[];
-  displayedColumns: string[] = ["id","category","header","title","caption","url","url1","url2","url3","url4","url5","url6","url7","url8"];
+  displayedColumns: string[] = ["id","category","title","caption","url"/*,"url1","url2","url3","url4","url5","url6","url7","url8"*/];
   dataSource = this.placeService.getAll();
   
 

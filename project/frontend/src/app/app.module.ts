@@ -76,6 +76,7 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
 import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
 import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
+import { TouristAccountComponent } from './tourist-account/tourist-account.component';
 
 
 
@@ -149,6 +150,7 @@ export function tokenGetter() {
     Image2Component,
     SearchComponent,
     CheckComponent,
+    TouristAccountComponent,
     
     
    
