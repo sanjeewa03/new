@@ -50,8 +50,19 @@ export class AvailabilityComponent implements OnInit {
      this.destinationList=this.bookingService.dastinations;
      console.log(this.destinationList);
    }
+   updateAccomedation(){
+    this.bookingService.addAcoomedations(this.route.snapshot.params['id']);
+    this.accomadationsList=this.bookingService.accomedations;
+    console.log(this.accomadationsList);
+  }
   ngOnInit() {
+    console.log(this.route.snapshot.params['id']=="place");
+    if(this.route.snapshot.params['acc']=="acc"){
+      this.updateAccomedation();
+    }
+    if(this.route.snapshot.params['acc']=="place"){
     this.updateDestination();
+    }
     
   }
 

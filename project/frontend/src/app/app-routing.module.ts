@@ -132,7 +132,7 @@ const routes: Routes = [
   
   { path: "image/:id",component:ImageDetailComponent 
 },
-  { path: "forms/:id",component:FormsComponent 
+  { path: "forms/:id/:acc",component:FormsComponent 
 },
   {path: "customizedform",component:CustomizedformComponent 
 },

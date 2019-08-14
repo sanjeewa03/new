@@ -14,6 +14,7 @@ import { from } from 'rxjs';
 export class ImageDetailComponent  implements OnInit {
     image:any;
     id:string;
+    acc:string="place";
 
     constructor(private imageService: ImageService ,private route:ActivatedRoute){}
 

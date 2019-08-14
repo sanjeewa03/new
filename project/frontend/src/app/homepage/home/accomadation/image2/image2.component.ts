@@ -14,6 +14,7 @@ import { from } from 'rxjs';
 export class Image2Component  implements OnInit {
     image:any
     id:string;
+    acc:string="acc";
 
     constructor(private imageService: ImageService ,private route:ActivatedRoute){}
 
