@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-places-add',
@@ -6,35 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./places-add.component.css']
 })
 export class PlacesAddComponent implements OnInit {
+  ngOnInit(): void {
+  }
 
-  constructor() { }
-  afuConfig = {
-    multiple: false,
-    formatsAllowed: ".jpg,.png",
-    maxSize: "1",
-    uploadAPI:  {
-      url:"http://localhost:4000/image/",
-      headers: {
-     "Content-Type" : "text/plain;charset=UTF-8",
-     "Authorization" : `Bearer ${localStorage.getItem('token')}`
-      }
-    },
-    theme: "dragNDrop",
-    hideProgressBar: true,
-    hideResetBtn: false,
-    hideSelectBtn: false,
-    replaceTexts: {
-      selectFileBtn: 'Select Files',
-      resetBtn: 'Reset',
-      uploadBtn: 'Upload',
-      dragNDropBox: 'Drag N Drop',
-      attachPinBtn: 'Attach Files...',
-      afterUploadMsg_success: 'Successfully Uploaded !',
-      afterUploadMsg_error: 'Upload Failed !'
-    }
-};
+  selectedFile: File = null;
+  fd = new FormData();
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {}
+
+  createFormData(event) {
+    this.selectedFile = <File>event.target.files[0];
+    this.fd.append('productImage', this.selectedFile, this.selectedFile.name);
+  }
+
+  upload() {
+    this.http.post('http://localhost:4000/image', this.fd)
+    .subscribe( result => {
+      console.log(result)
+    });
   }
 
 }

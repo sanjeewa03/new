@@ -1,5 +1,6 @@
-<angular-file-uploader 
-      [config]="afuConfig"
-      [resetUpload]=resetVar
-      (ApiResponse)="DocUpload($event)">
-</angular-file-uploader>
+<div>
+    <div>
+      <input type="file" (change)="createFormData($event)">
+    </div>
+    <button (click)="upload()">Upload</button>
+  </div>

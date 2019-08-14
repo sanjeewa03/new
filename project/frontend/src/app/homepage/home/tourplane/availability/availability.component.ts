@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 import { ActivatedRoute } from '@angular/router';
+import { BookingService } from '../../../../shared/booking/booking.service'
 
 @Component({
   selector: 'app-availability',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./availability.component.css']
 })
 export class AvailabilityComponent implements OnInit {
-  public list: string[]=[];
+  public list:String[];
   title: string = 'My first AGM project';
   lat: number;
   lng: number;
@@ -25,8 +26,8 @@ export class AvailabilityComponent implements OnInit {
       stopover: true
     }*/
   id:any;
-  constructor(private route:ActivatedRoute) {
-    this.list.push(this.route.snapshot.params['id']);
+  constructor(private route:ActivatedRoute,private bookingService:BookingService) {
+    
     this.set();
    }
    async set(){
@@ -42,7 +43,14 @@ export class AvailabilityComponent implements OnInit {
       }
     ]
    }
+
+   updateDestination(){
+     this.bookingService.addDestionation(this.route.snapshot.params['id']);
+     this.list=this.bookingService.dastinations;
+     console.log(this.list);
+   }
   ngOnInit() {
+    this.updateDestination();
     
   }
 

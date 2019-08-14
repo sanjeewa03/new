@@ -6,7 +6,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AngularFileUploaderModule } from "angular-file-uploader";
-
+import { MatFileUploadModule } from 'angular-material-fileupload';
+import { MatButtonModule } from '@angular/material';
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 import { AgmCoreModule } from '@agm/core';
@@ -176,7 +177,9 @@ export function tokenGetter() {
       apiKey: 'AIzaSyCcIWFonog_hbWAXEwDBirNLXU4W2LBYy4'
     }),
     AgmDirectionModule,
-    AngularFileUploaderModule
+    AngularFileUploaderModule,
+    MatFileUploadModule,
+    MatButtonModule,
     
   ],
   providers: [],
