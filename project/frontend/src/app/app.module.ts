@@ -67,6 +67,8 @@ import { AccomadationplaneComponent } from './homepage/home/accomadation/accomad
 import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.component';
 import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
 import { SearchComponent } from './homepage/home/accomadation/search/search.component';
+import { AgmDirectionModule } from 'agm-direction'; 
+import { CheckComponent } from './homepage/home/accomadation//check/check.component';
 
 
 import { AccountManagementComponent } from './bookings/account-management/account-management.component';
@@ -146,6 +148,7 @@ export function tokenGetter() {
     Galary2Component,
     Image2Component,
     SearchComponent,
+    CheckComponent,
     
     
    
@@ -170,10 +173,12 @@ export function tokenGetter() {
     MatFormFieldModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCcIWFonog_hbWAXEwDBirNLXU4W2LBYy4'
-    })
+    }),
+    AgmDirectionModule,
     
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

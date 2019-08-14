@@ -26,13 +26,16 @@ app.use(express.static(publicDir));
 app.use('/users', require('./modelsControlersAndServices/users/users.controller'));
 app.use('/hotel', require('./modelsControlersAndServices/hotels/hotel.controller'));
 
+
+app.use('/place', require('./modelsControlersAndServices/places/place.controller.js'));
+
 app.use('/tourist', require('./modelsControlersAndServices/tourist/tourist.controller'));
 app.use('/message',require('./modelsControlersAndServices/messages/messages.controller'));
 
 app.use('/safari',require('./modelsControlersAndServices/safari/safari.controller'));
 app.use('/package',require('./modelsControlersAndServices/package/package.controller'));
 
-
+app.use('/book',require('./modelsControlersAndServices/booking/booking.controller.js'));
 
 app.use('/image',require('./modelsControlersAndServices/image/image.controller'));
 
