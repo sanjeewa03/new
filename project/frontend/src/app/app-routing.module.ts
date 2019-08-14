@@ -29,6 +29,9 @@ import {BookingsComponent} from './bookings/bookings.component';
 import { AddRoomsComponent} from './bookings/add-rooms/add-rooms.component';
 import {EditRoomsComponent} from './bookings/edit-rooms/edit-rooms.component';
 import {ViewRoomsComponent} from './bookings/view-rooms/view-rooms.component';
+import { AccomadationsComponent } from './admin/components/sidebar/accomadations/accomadations.component';
+import { AddaccomadationsComponent } from './admin/components/sidebar/accomadations/addaccomadations/addaccomadations.component';
+
 
 import { from } from 'rxjs';
 import { Galary1Component } from './homepage/home/safariplane/galary1/galary1.component';
@@ -36,7 +39,7 @@ import { Image1Component } from './homepage/home/safariplane/image1/image1.compo
 import { AccomadationplaneComponent } from './homepage/home/accomadation/accomadationplane/accomadationplane.component';
 import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.component';
 import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
-
+import {TouristAccountComponent} from './tourist-account/tourist-account.component';
 
 
 const routes: Routes = [
@@ -86,7 +89,10 @@ const routes: Routes = [
       {path:'packages', component: PackagesComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'packages/add', component: PackagesAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
 
+      {path:'accomadations', component: AccomadationsComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
+      {path: 'accomadations/add', component: AddaccomadationsComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
 
+       
 
       ]}]
    },
@@ -119,6 +125,10 @@ const routes: Routes = [
   {
     path:'viewrooms', component: ViewRoomsComponent
   },
+  {
+    path:'touristAccount', component: TouristAccountComponent
+  },
+
   
   { path: "image/:id",component:ImageDetailComponent 
 },

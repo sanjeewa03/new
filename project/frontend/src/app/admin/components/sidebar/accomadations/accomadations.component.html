@@ -13,8 +13,8 @@
  <router-outlet></router-outlet>
 
 <div class="btn-toolbar">
-    <button href="#" class="btn btn-warning"><i class="fa fa-paw"></i> Location Dashboard</button>
-    <a href="/admin/place/add" class="btn btn-success"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span> <strong>ADD</strong></a>
+    <button href="#" class="btn btn-warning"><i class="fa fa-paw"></i> Accomadations Dashboard</button>
+    <a href="/admin/accomadations/add" class="btn btn-success"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span> <strong>ADD</strong></a>
     <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
     <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
     <span class="input-group-btn">
@@ -32,7 +32,7 @@
        
         <!-- username Column -->
         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <th mat-header-cell *matHeaderCellDef> id </th>
           <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
       
@@ -94,3 +94,4 @@
 
 </body>
 </html>
+
