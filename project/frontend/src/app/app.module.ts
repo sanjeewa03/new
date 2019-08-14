@@ -49,7 +49,6 @@ import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.comp
 import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
 import { ImageFilterPipe } from './homepage/home/tourplane/image/shared/filter.pipe';
 import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
-import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
 import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
 import {PackagesComponent} from './admin/components/sidebar/packages/packages.component';
@@ -67,7 +66,7 @@ import { AccomadationplaneComponent } from './homepage/home/accomadation/accomad
 import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.component';
 import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
 import { SearchComponent } from './homepage/home/accomadation/search/search.component';
-import { CheckComponent } from './homepage/home/accomadation//check/check.component';
+import { CheckComponent } from './homepage/home/accomadation/check/check.component';
 
 
 import { AccountManagementComponent } from './bookings/account-management/account-management.component';
@@ -75,6 +74,7 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
 import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
 import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
+import { PaymentComponent } from './homepage/home/accomadation/payment/payment.component';
 
 
 
@@ -124,7 +124,6 @@ export function tokenGetter() {
     ImageDetailComponent,
     ImageFilterPipe,
     FormsComponent,
-    CustomComponent,
     CustomizedformComponent,
     PackagesAddComponent,
     PackagesComponent,
@@ -148,6 +147,7 @@ export function tokenGetter() {
     Image2Component,
     SearchComponent,
     CheckComponent,
+    PaymentComponent,
     
     
    

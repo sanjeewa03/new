@@ -1,5 +1,6 @@
+<app-nav></app-nav>
 <body>
-                
+        <div class="split right">       
         <div id="booking" class="section">
         <div class="section-center">
         <div class="container">
@@ -58,11 +59,11 @@
         <mat-list role="list">
                 <br>
         <mat-list-item role="listitem" *ngFor="let item of list" >{{item}}</mat-list-item>
-        <div class="split right">
+       
         <div class="form-btn">
         <button class="btn" [routerLink]="['/gallery']">Add More </button>
         </div> 
-        </div>
+        
         </mat-list>
         </mat-list>
         </div>
@@ -75,10 +76,8 @@
         <mat-list role="list">
                 <br>
         <mat-list-item role="listitem" *ngFor="let item of list" >{{item}}</mat-list-item>
-        <div class="split right">
         <div class="form-btn">
         <button class="btn" [routerLink]="['/galary1']">Add More</button>
-        </div> 
         </div>
         </mat-list>
         </mat-list>
@@ -90,7 +89,7 @@
         </div>
         
         <div class="form-btn">
-        <button class="submit-btn">Check availability</button>
+        <button class="submit-btn" [routerLink]="['/accomadationplane']">See your Plan</button>
         </div>
         </form>
         </div>
@@ -99,9 +98,13 @@
         </div>
         </div>
         </div>
-        <div>
-                <agm-map [latitude]="lat" [longitude]="lng">
-                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                      </agm-map>  
+        
+
+
+        <div class = "split left">
+        <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>  
+        </div>
         </div>
 </body>        

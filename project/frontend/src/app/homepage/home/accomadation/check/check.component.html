@@ -1,58 +1,57 @@
-<body>
-  <div id="booking" class="section">
-  <div class="section-center">
-  <div class="container">
-  <div class="row">
-  <div class="col-md-7 col-md-push-5">
-  <div class="booking-cta">
-  <h1>Book Now!</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere, soluta magnam consectetur molestias itaque
-  ad sint fugit architecto incidunt iste culpa perspiciatis possimus voluptates aliquid consequuntur cumque quasi.
-  Perspiciatis.
-  </p>
-  </div>
-  </div>
-  <div class="col-md-4 col-md-pull-7">
-  <div class="booking-form">
-  <form>
-  <div class="form-group">
-  <span class="form-label">Your Destination</span>
-  <input class="form-control" type="text" placeholder="Enter a destination or hotel name">
-  </div>
-  <div class="row no-margin">
-  <div class="col-sm-4">
-  <div class="form-group">
-  <span class="form-label">Check In</span>
-  <input class="form-control" type="date" required>
-  </div>
-  <span class="in-out hidden-xs">&#8652;</span>
-  </div>
-  <div class="col-sm-4">
-  <div class="form-group">
-  <span class="form-label">Check out</span>
-  <input class="form-control" type="date" required>
-  </div>
-  </div>
-  <div class="col-sm-4">
-  <div class="form-group">
-  <span class="form-label">Guests</span>
-  <select class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  </select>
-  <span class="select-arrow"></span>
-  </div>
-  </div>
-  </div>
-  <div class="form-btn">
-  <button class="submit-btn">Check availability</button>
-  </div>
-  </form>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</body>
+<section class="section ">
+    <div class="container">
+    <div class="row check-availabilty" id="next">
+    <div class="block-32" data-aos="fade-up" >
+    <form action="#">
+    <div class="row">
+    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+    <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+    <div class="field-icon-wrap">
+    <div class="icon"><span class="icon-calendar"></span></div>
+    <input type="date" id="checkin_date" class="form-control">
+    </div>
+    </div>
+    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+    <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+    <div class="field-icon-wrap">
+    <div class="icon"><span class="icon-calendar"></span></div>
+    <input type="date" id="checkout_date" class="form-control">
+    </div>
+    </div>
+    <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+    <div class="row">
+    <div class="col-md-6 mb-3 mb-md-0">
+    <label for="adults" class="font-weight-bold text-black">Adults</label>
+    <div class="field-icon-wrap">
+    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+    <select name="" id="adults" class="form-control">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4+</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6 mb-3 mb-md-0">
+    <label for="children" class="font-weight-bold text-black">Children</label>
+    <div class="field-icon-wrap">
+    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+    <select name="" id="children" class="form-control">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4+</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 col-lg-3 align-self-end">
+    <button class="btn btn-primary btn-block text-white">Check Availabilty</button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </section>
