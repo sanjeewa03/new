@@ -9,7 +9,8 @@ import { BookingService } from '../../../../shared/booking/booking.service'
   styleUrls: ['./availability.component.css']
 })
 export class AvailabilityComponent implements OnInit {
-  public list:String[];
+  public destinationList:String[];
+  public accomadationsList:String[];
   title: string = 'My first AGM project';
   lat: number;
   lng: number;
@@ -46,8 +47,8 @@ export class AvailabilityComponent implements OnInit {
 
    updateDestination(){
      this.bookingService.addDestionation(this.route.snapshot.params['id']);
-     this.list=this.bookingService.dastinations;
-     console.log(this.list);
+     this.destinationList=this.bookingService.dastinations;
+     console.log(this.destinationList);
    }
   ngOnInit() {
     this.updateDestination();

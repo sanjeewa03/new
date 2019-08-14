@@ -13,13 +13,15 @@ import { from } from 'rxjs';
 
 export class Image2Component  implements OnInit {
     image:any
+    id:string;
 
     constructor(private imageService: ImageService ,private route:ActivatedRoute){}
 
     ngOnInit(){
         this.image= this.imageService.getImage(
             +this.route.snapshot.params['id']
-        )
+        );
+        this.id=this.route.snapshot.params['id'];
 
     }
 }
