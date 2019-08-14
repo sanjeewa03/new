@@ -5,7 +5,9 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { AngularFileUploaderModule } from "angular-file-uploader";
+import { MatFileUploadModule } from 'angular-material-fileupload';
+import { MatButtonModule } from '@angular/material';
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 import { AgmCoreModule } from '@agm/core';
@@ -67,6 +69,8 @@ import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.c
 import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
 import { SearchComponent } from './homepage/home/accomadation/search/search.component';
 import { CheckComponent } from './homepage/home/accomadation/check/check.component';
+import { AgmDirectionModule } from 'agm-direction'; 
+import { CheckComponent } from './homepage/home/accomadation//check/check.component';
 
 
 import { AccountManagementComponent } from './bookings/account-management/account-management.component';
@@ -75,6 +79,10 @@ import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
 import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
 import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
 import { PaymentComponent } from './homepage/home/accomadation/payment/payment.component';
+import { TouristAccountComponent } from './tourist-account/tourist-account.component';
+import { AccomadationsComponent } from './admin/components/sidebar/accomadations/accomadations.component';
+import { AddaccomadationsComponent } from './admin/components/sidebar/accomadations/addaccomadations/addaccomadations.component';
+
 
 
 
@@ -148,6 +156,10 @@ export function tokenGetter() {
     SearchComponent,
     CheckComponent,
     PaymentComponent,
+    TouristAccountComponent,
+    AccomadationsComponent,
+    AddaccomadationsComponent,
+    
     
     
    
@@ -172,10 +184,15 @@ export function tokenGetter() {
     MatFormFieldModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCcIWFonog_hbWAXEwDBirNLXU4W2LBYy4'
-    })
+    }),
+    AgmDirectionModule,
+    AngularFileUploaderModule,
+    MatFileUploadModule,
+    MatButtonModule,
     
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

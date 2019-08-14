@@ -8,7 +8,7 @@
         <div class="col-md-7 col-md-push-5">
         <div class="booking-cta">
         <h1>Book Now!</h1>
-        {{id}}
+        
        
         </div>
         </div>
@@ -98,13 +98,14 @@
         </div>
         </div>
         </div>
-        
-
-
-        <div class = "split left">
-        <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map>  
-        </div>
+        <div>
+                <agm-map [latitude]="lat" [longitude]="lng">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                <agm-direction [origin]="origin" [destination]="destination"  [waypoints]="waypoints" [travelMode]="'DRIVING'">
+                </agm-direction>
+                </agm-map>  
+                <!-- <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+                </agm-map> -->
         </div>
 </body>        

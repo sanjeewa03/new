@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 import { ActivatedRoute } from '@angular/router';
+import { BookingService } from '../../../../shared/booking/booking.service'
 
 @Component({
   selector: 'app-availability',
@@ -8,17 +9,49 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./availability.component.css']
 })
 export class AvailabilityComponent implements OnInit {
-  public list: string[]=[];
+  public list:String[];
   title: string = 'My first AGM project';
-  lat: number = 51.678418;
-  lng: number = 7.809007; 
+  lat: number;
+  lng: number;
+  public origin;
+  public destination;
+  
+  public waypoints;
+    /*{
+      location: { lat: 51.373858, lng: 7.215982 },
+      stopover: true
+    },
+    {
+      location: { lat: 51.723858, lng: 7.895982 },
+      stopover: true
+    }*/
   id:any;
-  constructor(private route:ActivatedRoute) {
-    this.list.push(this.route.snapshot.params['id']);
+  constructor(private route:ActivatedRoute,private bookingService:BookingService) {
+    
+    this.set();
+   }
+   async set(){
+    this.lat=7.033351;
+    this.lng= 79.898529;
+    this.id=this.route.snapshot.params['id'];
+    this.origin= { lat: 6.086959, lng: 79.034443 };
+    this.destination= { lat: 6.901760, lng: 79.861821};
+    this.waypoints = [
+      {
+        location: { lat: 7.033351, lng: 79.898529 },
+        stopover: true
+      }
+    ]
    }
 
+   updateDestination(){
+     this.bookingService.addDestionation(this.route.snapshot.params['id']);
+     this.list=this.bookingService.dastinations;
+     console.log(this.list);
+   }
   ngOnInit() {
-    this.id=this.route.snapshot.params['id'];
+    this.updateDestination();
+    
   }
 
 }

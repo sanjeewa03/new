@@ -83,19 +83,21 @@ router.post("/", upload.single('productImage'),(req,res,next) =>{
 product
 .save()
 .then(result => {
-  console.log(result);
+  //console.log(result);
   res.status(201).json({
 	message: "Created product successfully"
 	
   });
 })
 .catch(err => {
-  console.log(err);
+  //console.log(err);
   res.status(500).json({
 	error: err
   });
 });
 });
+
+
 
 
 

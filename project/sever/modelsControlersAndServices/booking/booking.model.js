@@ -2,14 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    bokkingID: { type: Int, unique: true, required: true },
-    userName: { type: String, unique: true, required: true },
+    bookingid: { type:String, unique: true, required: true },
+    userName: { type: String, unique: false, required: true },
     createdDate: { type: Date, default: Date.now },
     places: { type: [] },
     hotels: { type: [] },
-    safari: { type: [] },
-    vahical: { type: [] },
-    packages: { type: [] },
     checkin: { type: Date, required:true},
     checkout: { type: Date, required:true}
 });
