@@ -70,7 +70,6 @@ import { Image2Component } from './homepage/home/accomadation/image2/image2.comp
 import { SearchComponent } from './homepage/home/accomadation/search/search.component';
 import { CheckComponent } from './homepage/home/accomadation/check/check.component';
 import { AgmDirectionModule } from 'agm-direction'; 
-import { CheckComponent } from './homepage/home/accomadation//check/check.component';
 
 
 import { AccountManagementComponent } from './bookings/account-management/account-management.component';
