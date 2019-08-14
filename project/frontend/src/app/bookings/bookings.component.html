@@ -68,36 +68,18 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>1</td>
-                                        <td>Kilgore</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>2</td>
-                                        <td>4</td>
+                                      <tr *ngFor="let obj of model let i = index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{obj.Name}}</td>
+                                        <td>{{obj. Check_In}}</td>
+                                        <td>{{obj.Check_Out}}</td>
+                                        <td>{{obj.Payment}}</td>
+                                        <td>{{obj.Phone}}</td>
+                                        <td>{{obj. Room_Type}}</td>
+                                        
                                       </tr>
-                                      <tr>
-                                        <td>2</td>
-                                        <td>Bob</td>
-                                        <td>Loblaw</td>
-                                        <td>boblahblah</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>4</td>
-                                        <td>5</td>
-                                      </tr>
-                                      <tr>
-                                        <td>3</td>
-                                        <td>Holden</td>
-                                        <td>Caulfield</td>
-                                        <td>penceyreject</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                      </tr>
+                                      
+                                      
                                     </tbody>
                                   </table>
                                 </div>

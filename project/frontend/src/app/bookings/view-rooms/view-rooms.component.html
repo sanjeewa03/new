@@ -63,41 +63,21 @@
                                         <th>Meal</th>
                                         <th>Phone</th>
                                         <th>Rent</th>
-                                        <th>Room Type</th>
+                                       
 
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>1</td>
-                                        <td>Kilgore</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                      </tr>
-                                      <tr>
-                                        <td>2</td>
-                                        <td>Bob</td>
-                                        <td>Loblaw</td>
-                                        <td>boblahblah</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>4</td>
-                                        <td>5</td>
-                                      </tr>
-                                      <tr>
-                                        <td>3</td>
-                                        <td>Holden</td>
-                                        <td>Caulfield</td>
-                                        <td>penceyreject</td>
-                                        <td>Trout</td>
-                                        <td>kilgore</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                      </tr>
+                                        <tr *ngFor="let obj of model let i = index">
+                                            <td>{{i+1}}</td>
+                                            <td>{{obj.type}}</td>
+                                            <td>{{obj. ac_non}}</td>
+                                            <td>{{obj.meal}}</td>
+                                            <td>{{obj.phone}}</td>
+                                            <td>{{obj.rent}}</td>
+                                           
+                                            
+                                          </tr>
                                     </tbody>
                                   </table>
                                 </div>
