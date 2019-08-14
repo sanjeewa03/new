@@ -18,7 +18,6 @@ import { TouristAddComponent } from './admin/components/sidebar/tourist/tourist-
 import { GalleryComponent } from './homepage/home/tourplane/gallery/gallery.component';
 import { ImageDetailComponent } from './homepage/home/tourplane/image/image-detail.component';
 import { FormsComponent } from './homepage/home/tourplane/forms/forms.component';
-import { CustomComponent } from './homepage/home/tourplane/custom/custom.component';
 import { CustomizedformComponent } from './homepage/home/tourplane/customizedform/customizedform.component';
 import { PackagesAddComponent } from './admin/components/sidebar/packages/packages-add/package-add.component';
 import { PackagesComponent } from './admin/components/sidebar/packages/packages.component';
@@ -29,6 +28,7 @@ import {BookingsComponent} from './bookings/bookings.component';
 import { AddRoomsComponent} from './bookings/add-rooms/add-rooms.component';
 import {EditRoomsComponent} from './bookings/edit-rooms/edit-rooms.component';
 import {ViewRoomsComponent} from './bookings/view-rooms/view-rooms.component';
+import { AvailabilityComponent } from './homepage/home/tourplane/availability/availability.component';
 import { AccomadationsComponent } from './admin/components/sidebar/accomadations/accomadations.component';
 import { AddaccomadationsComponent } from './admin/components/sidebar/accomadations/addaccomadations/addaccomadations.component';
 
@@ -134,11 +134,11 @@ const routes: Routes = [
 },
   { path: "forms/:id",component:FormsComponent 
 },
-   {path: "custom",component:CustomComponent 
-},
-    {path: "customizedform",component:CustomizedformComponent 
+  {path: "customizedform",component:CustomizedformComponent 
 },
     {path: "galary1",component:Galary1Component 
+},
+{ path: "availability",component:AvailabilityComponent 
 },
 { path: "Safariimage/:id",component:Image1Component 
 },

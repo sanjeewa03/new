@@ -1,7 +1,10 @@
 <app-nav></app-nav>
-<br><br><br><br><br>
 
-    <div class="header">
+<br><br><br><br><br><br><br><br><br><br>
+<br>
+<app-check></app-check>
+<br><br><br>
+<div class="header">
         <span id="header">
             {{image.header}}   
         </span><br>
@@ -21,9 +24,18 @@
                 </span>
     </div>
     </div>
-   
-    <div class ="row">
+    
+    <!-----div class ="row">
             <div class ="col-md-12" >
+                    <div class = "description1">
+            </div>
+            </div>
+    </div------>
+    
+
+<br><br>
+    
+        <div class ="col-md-12" >
         <div class = "description">
         
                 <div [ngStyle]="{'background-image':'url('+image.url+')'}" class="img-container" ></div>
@@ -32,13 +44,18 @@
             <div [ngStyle]="{'background-image':'url('+image.url1+')'}" class="img-container1" ></div>
             <div [ngStyle]="{'background-image':'url('+image.url2+')'}" class="img-container1"></div>
             <div [ngStyle]="{'background-image':'url('+image.url3+')'}" class="img-container1"></div>
+            <div [ngStyle]="{'background-image':'url('+image.url4+')'}" class="img-container1"></div>
+            <div [ngStyle]="{'background-image':'url('+image.url5+')'}" class="img-container1"></div>
 
         </section>
         
     </div>
-    </div>
+    </div><br>
+    <span style="border: 2px solid rgba(0,0,0,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7); width:20%; align-content:center;" class="btn btn-primary btn-lg" [routerLink]="['/forms']"  [class.active]="filterBy=='all'" (click)="filterBy='all'"><i class="glyphicon glyphicon-ok">Book Now </i></span>
+
+   
+   
      
-    <app-check></app-check>
       
         
         

@@ -13,7 +13,7 @@
 	
 	height: 1000px; 
 	background-position: center;
-	 background-repeat: no-repeat; 
+	background-repeat: no-repeat; 
 	background-size: cover; 
 	opacity:0.2px;
 }
@@ -21,8 +21,6 @@
 .section .section-center {
 	position: absolute;
 	top: 50%;
-	left: 0;
-	right: 0;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
@@ -204,5 +202,17 @@
 	color: #070707;
 }
 agm-map {
-	height: 300px;
-  }
+	height: 500px;
+	width:50%;
+
+}
+.split.right {
+		height: 90%;
+		width: 100%;
+		overflow-x: hidden;
+		padding-top: 20px;
+	   
+	   
+		  
+}
+  
