@@ -77,6 +77,9 @@ import { ViewRoomsComponent } from './bookings/view-rooms/view-rooms.component';
 import { AddRoomsComponent } from './bookings/add-rooms/add-rooms.component';
 import { EditRoomsComponent } from './bookings/edit-rooms/edit-rooms.component';
 import { TouristAccountComponent } from './tourist-account/tourist-account.component';
+import { AccomadationsComponent } from './admin/components/sidebar/accomadations/accomadations.component';
+import { AddaccomadationsComponent } from './admin/components/sidebar/accomadations/addaccomadations/addaccomadations.component';
+
 
 
 
@@ -151,6 +154,9 @@ export function tokenGetter() {
     SearchComponent,
     CheckComponent,
     TouristAccountComponent,
+    AccomadationsComponent,
+    AddaccomadationsComponent,
+    
     
     
    
