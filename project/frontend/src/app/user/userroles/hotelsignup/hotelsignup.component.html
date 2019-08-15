@@ -1,0 +1,148 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<body style="background-image: url(https://wallpapercave.com/wp/wp1903469.jpg); width: 100%;height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; ">
+<router-outlet></router-outlet>
+<div class="container fadeInDown">
+<br>
+<hr>
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+	
+	<h4 class="card-title mt-2">Register Your Info..</h4>
+</div>
+
+<article class="card-body">
+
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+    <div class="form-row">
+      <div class="col form-group">
+          <label>Hotel Name *</label>
+          <input type="uname" #userName="ngModel" [(ngModel)]="userService.selectedUser.username"  name="username" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+          <div *ngIf="signUpForm.submitted && !username.valid">
+             <label class="validation-message">This field is required.</label>
+          </div>
+      </div>
+    </div> <br>
+    <div class="form-row">
+        <div class="col form-group">
+          <label>Hotel Category *</label>
+            <select id="category" #roomtype="ngModel" [(ngModel)]="userService.selectedUser.category" name="category" class="form-control" placeholder=""
+            required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !category.valid }">
+            <div *ngIf="signUpForm.submitted && !category.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+            <option value="Luxury">Luxury</option>
+            <option value="Economical">Economical</option>
+            <option value="Reasonable">Reasonable</option>
+            <option value="Other">Other</option>
+            
+            </select>
+        </div>
+      </div> 
+      <div class="form-row">
+          <div class="col form-group">
+           <label>Location*</label>
+            <input type="location"  #location="ngModel" [(ngModel)]="userService.selectedUser.location" name="location" class="form-control" placeholder=" "
+            required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !location.valid }">
+            <div *ngIf="signUpForm.submitted && !location.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+      </div>
+
+    <div class="form-row">
+      <div class="col form-group">
+       <label>Email *</label>
+        <input type="email"  #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" class="form-control" placeholder=" "
+        required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+        <div *ngIf="signUpForm.submitted && !email.valid">
+          <label class="validation-message">This field is required.</label>
+        </div>
+      </div>
+
+      <div class="col form-group">
+        <label>Web site</label>
+          <input type="web" #web="ngModel" [(ngModel)]="userService.selectedUser.web" name="web" placeholder="xxxx.com" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !web.valid }">
+          <div *ngIf="signUpForm.submitted && !web.valid">
+          </div>
+      </div>
+    </div>
+
+  <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+      </div>
+		  
+    	    <input name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="userService.selectedUser.phoneNumber" class="form-control" placeholder="Phone number" type="text"
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNumber.valid }">
+          <div *ngIf="signUpForm.submitted && !phoneNumber.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col form-group">
+		    <label>Room  Type *</label>
+		      <select id="inputState" #roomtype="ngModel" [(ngModel)]="userService.selectedUser.roomtype" name="roomtype" class="form-control" placeholder=""
+          required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !nationality.valid }">
+          <div *ngIf="signUpForm.submitted && !roomtype.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Triple">Triple</option>
+          <option value="Quad">Quad</option>
+          <option value="Queen">Queen</option>
+          <option value="King">King</option>
+          <option value="Twin">Twin</option>
+          </select>
+      </div>
+    </div> <br>
+
+      <div class="form-group">
+        <label>Create Password *</label>
+          <input class="form-control"  type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+          minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+          <div *ngIf="signUpForm.submitted && password.errors">
+            <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+            <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+          </div>
+      </div>
+      <div class="form-group">
+      <label>Confirm Password *</label>
+        <input class="form-control" type="password"  name="password2" placeholder="Password"
+        minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !passwordNew.valid }">
+        <div *ngIf="signUpForm.submitted && passwordNew.errors">
+          <label *ngIf="passwordNew.errors.required" class="validation-message">This field is required.</label>
+          <label *ngIf="passwordNew.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-block" value="Register">
+      </div>
+       <p><small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our  Terms of use and Privacy Policy.</small> </p>
+  </form>
+
+</article> <!-- card-body end .// -->
+    <div class="border-top card-body text-center">Have an account? 	<a [routerLink]="['/signin']">Log In</a></div>
+    <div class="border-top card-body text-center"><a [routerLink]="['/home']">BACKPACKING SRI LANKA</a></div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+
