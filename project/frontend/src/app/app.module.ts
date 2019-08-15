@@ -14,7 +14,7 @@ import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import { SignUpComponent } from './user/sign-up/sign-up.component';
+import { SignUpComponent } from './user/userroles/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignInComponent } from './user/sign-in/sign-in.component';
@@ -81,6 +81,9 @@ import { PaymentComponent } from './homepage/home/accomadation/payment/payment.c
 import { TouristAccountComponent } from './tourist-account/tourist-account.component';
 import { AccomadationsComponent } from './admin/components/sidebar/accomadations/accomadations.component';
 import { AddaccomadationsComponent } from './admin/components/sidebar/accomadations/addaccomadations/addaccomadations.component';
+import { UserrolesComponent } from './user/userroles/userroles.component';
+import { HotelsignupComponent } from './user/userroles/hotelsignup/hotelsignup.component';
+import { SafarisignupComponent } from './user/userroles/safarisignup/safarisignup.component';
 
 
 
@@ -158,6 +161,9 @@ export function tokenGetter() {
     TouristAccountComponent,
     AccomadationsComponent,
     AddaccomadationsComponent,
+    UserrolesComponent,
+    HotelsignupComponent,
+    SafarisignupComponent,
     
     
     

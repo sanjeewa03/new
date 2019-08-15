@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SignUpComponent } from './user/sign-up/sign-up.component';
+import { SignUpComponent } from './user/userroles/sign-up/sign-up.component';
 import { UserComponent } from './user/user.component';
 import { SignInComponent} from './user/sign-in/sign-in.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -40,6 +40,8 @@ import { AccomadationplaneComponent } from './homepage/home/accomadation/accomad
 import { Galary2Component } from './homepage/home/accomadation/galary2/galary2.component';
 import { Image2Component } from './homepage/home/accomadation/image2/image2.component';
 import {TouristAccountComponent} from './tourist-account/tourist-account.component';
+import { UserrolesComponent } from './user/userroles/userroles.component';
+
 
 
 const routes: Routes = [
@@ -147,6 +149,8 @@ const routes: Routes = [
 {path: "galary2",component:Galary2Component 
 },
 { path: "Hotelimage/:id",component:Image2Component 
+},
+{ path: "userroles",component:UserrolesComponent 
 },
 ];
 
