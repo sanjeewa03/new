@@ -13,7 +13,7 @@
     background-position: center;
     background-repeat: no-repeat;
     align-content: center;
-    
+
 }
 .img-container1{
   margin: 2px;
@@ -25,7 +25,7 @@
   background-repeat: no-repeat;
   align-content: center;
 
-   
+
 }
 .row{
   padding:1px;
@@ -43,14 +43,14 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 18px;
   color: #222;
-  
+
 }
 .header1{
   font-size: 22px;
   font-family:sans-serif;
   padding: 8px;
   color: rgb(21, 21, 116);
-  
+
 }.header2{
   font-size: 22px;
   font-family:sans-serif;
@@ -89,25 +89,25 @@
     overflow-x: hidden;
     padding-top: 10px;
   }
-  
+
 
   .right {
     right: 0;
     background-color: white;
   }
-  
+
   .container {
     position: relative;
     width: 80%;
     left: 40px;
   }
-  
+
   .image {
     display: block;
     width: 10%;
     height: auto;
   }
-  
+
   .overlay {
     position: absolute;
     bottom: 0;
@@ -119,11 +119,11 @@
     height: 0;
     transition: .5s ease;
   }
-  
+
   .container:hover .overlay {
     height: 100%;
   }
-  
+
   .text {
     color: white;
     font-size: 20px;
@@ -142,12 +142,12 @@
     font-size: 16px;
     border: none;
   }
-  
+
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -161,7 +161,7 @@
     width: 1300px;
     height: 500px;
     border: 1px solid rgb(21, 7, 37);
-    
+
   }
   .description1{
     background-color: rgb(250, 248, 248);
@@ -171,8 +171,8 @@
     padding: 20px;
     margin: 20px;
   }
-  
-  
+
+
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -189,7 +189,7 @@
   .button {
    width:25%;
    height:25%;
-    
+
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -478,8 +478,13 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-   
-   
-      
+
+
+
     }
+
+
+
+
+    .booking_form{display:block;width:100%}.booking_input{width:100%;height:54px;background:rgba(255,255,255,.2);border:solid 2px #fff;padding-left:27px;font-size:14px;font-weight:500;color:#fff;outline:none}.booking_input_container{width:100%}.booking_input_container>div{padding-right:10px}.booking_input_container>div:first-child,.booking_input_container>div:nth-child(2){width:32.60869565217391%}.booking_input_container>div:nth-child(3),.booking_input_container>div:nth-child(4){width:17.39130434782609%}.booking_input_a{}.booking_input_b{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}.booking_input::-webkit-input-placeholder{font-size:14px!important;font-weight:500!important;color:#fff!important}.booking_input:-moz-placeholder{font-size:14px!important;font-weight:500!important;color:#fff!important}.booking_input::-moz-placeholder{font-size:14px!important;font-weight:500!important;color:#fff!important}.booking_input:-ms-input-placeholder{font-size:14px!important;font-weight:500!important;color:#fff!important}.booking_input::input-placeholder{font-size:14px!important;font-weight:500!important;color:#fff!important}.booking_button{width:152px;height:54px;background:#ffa37b;font-size:14px;font-weight:500;color:#fff;border:none;outline:none;cursor:pointer}.booking_button:hover{background:rgba(255,255,255,.2)}.features{background:#fff;padding-top:115px;padding-bottom:24px}.icon_box_col{margin-bottom:80px}.icon_box_icon{width:82px;height:82px}.icon_box_icon img{max-width:100%;max-height:100%}.icon_box_icon svg{max-width:100%;max-height:100%}
 

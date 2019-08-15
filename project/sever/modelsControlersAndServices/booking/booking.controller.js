@@ -15,14 +15,14 @@ module.exports = router;
 function bookpkg(req, res, next) {
     
     let hotelbooking = []
-    req.body.hotels.forEach(hotel => {
+    req.body.accomadationsList.forEach(hotel => {
         bookhotel(hotel,req.body.bookingid,req.body.userName);
         hotelbooking.push("ho_"+req.body.bookingid+"_"+hotel[0])
     });
     
     console.log(hotelbooking);
     
-    req.body.hotels = hotelbooking;
+    req.body.accomadationsList = hotelbooking;
     const booking = new Booking(req.body)
     booking.save();
     res.status(200).send();

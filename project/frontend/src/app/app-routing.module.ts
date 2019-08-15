@@ -46,7 +46,7 @@ const routes: Routes = [
   {
     path:'home', component: HomepageComponent,canActivate: [SessionGuard]
   },
- 
+
   {
     path: 'signup', component: UserComponent,canActivate: [SessionGuard],
     children: [{path: '', component: SignUpComponent}]
@@ -59,20 +59,20 @@ const routes: Routes = [
   {
     path: 'admin', component: AdminComponent,
     canActivate: [RoleGuard],
-    data: { 
+    data: {
     expectedRole: 'Admin'
     } ,
 
     //admin dashboard routes
     children: [{ path: '', component: DashboardComponent ,canActivate: [RoleGuard],data: {expectedRole: 'Admin'},
-    
+
       children: [
 
       //admin dashboard sidebar hotel routes
       {path:'hotel', component: HotelComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'hotel/add', component: HotelAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
-      
-      
+
+
       //admin dashboard sidebar places routes
       {path:'place', component: PlacesComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'place/add', component: PlacesAddComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
@@ -92,7 +92,7 @@ const routes: Routes = [
       {path:'accomadations', component: AccomadationsComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
       {path: 'accomadations/add', component: AddaccomadationsComponent,canActivate: [RoleGuard],data: {expectedRole: 'Admin'}},
 
-       
+
 
       ]}]
    },
@@ -101,14 +101,14 @@ const routes: Routes = [
   },
   {
     path:'tourist', component: TouristHomeComponent,canActivate: [RoleGuard],
-    data: { 
+    data: {
     expectedRole: 'User'
     }
   },
   {
     path:'gallery', component: GalleryComponent
   },
- 
+
   {
     path:'accountManagement', component: AccountManagementComponent
   },
@@ -129,24 +129,24 @@ const routes: Routes = [
     path:'touristAccount', component: TouristAccountComponent
   },
 
-  
-  { path: "image/:id",component:ImageDetailComponent 
+
+  { path: "image/:id",component:ImageDetailComponent
 },
-  { path: "forms/:id/:acc",component:FormsComponent 
+  { path: "forms/:id/:acc/:pax/:checkin/:checkout",component:AvailabilityComponent
 },
-  {path: "customizedform",component:CustomizedformComponent 
+  {path: "customizedform",component:CustomizedformComponent
 },
-    {path: "galary1",component:Galary1Component 
+    {path: "galary1",component:Galary1Component
 },
-{ path: "availability",component:AvailabilityComponent 
+{ path: "availability",component:AvailabilityComponent
 },
-{ path: "Safariimage/:id",component:Image1Component 
+{ path: "Safariimage/:id",component:Image1Component
 },
 {path: "accomadationplane",component:AccomadationplaneComponent
 },
-{path: "galary2",component:Galary2Component 
+{path: "galary2",component:Galary2Component
 },
-{ path: "Hotelimage/:id",component:Image2Component 
+{ path: "Hotelimage/:id",component:Image2Component
 },
 ];
 

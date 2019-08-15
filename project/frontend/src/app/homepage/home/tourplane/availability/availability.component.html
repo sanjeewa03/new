@@ -1,110 +1,101 @@
 <app-nav></app-nav>
+
 <body>
-        <div class="split right">       
-        <div id="booking" class="section">
-        <div class="section-center">
+  <div class="split right">
+    <div id="booking" class="section">
+      <div class="section-center">
         <div class="container">
-        <div class="row">
-        <div class="col-md-7 col-md-push-5">
-        <div class="booking-cta">
-        <h1>Book Now!</h1>
-        
-       
+          <div class="row">
+            <div class="col-md-7 col-md-push-5">
+              <div class="booking-cta">
+                <h1>Book Now!</h1>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-md-pull-10">
+              <div class="booking-form">
+                <form #availabilityForm="ngForm" (ngSubmit)="onSubmit(availabilityForm)">
+                  <!----div class="form-group">
+        <span class="form-label">Your Destination</span>
+        <input class="form-control" type="text" placeholder="Enter a destination or hotel name">
+        </div--->
+                  <div class="row no-margin">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Check In</span>
+                        <input class="form-control" name="checkInDate" type="date" required ngModel/>
+                      </div>
+                      <span class="in-out hidden-xs">&#8652;</span>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Check out</span>
+                        <input class="form-control" name="checkOutDate" type="date" required ngModel/>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <div class="form-label">
+                          <h5>Your Destinations List :</h5>
+                        </div>
+
+                        <mat-list class="list">
+                          <mat-list role="list">
+                            <br />
+                            <mat-list-item role="listitem" *ngFor="let item of destinationList">{{ item }}
+                            </mat-list-item>
+                            <div class="split right">
+                              <div class="form-btn">
+                                <button class="btn" [routerLink]="['/gallery']">
+                                  Add More
+                                </button>
+                              </div>
+                            </div>
+                          </mat-list>
+                        </mat-list>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <span class="form-label">
+                          <h5>Your Accomadations List :</h5>
+                        </span>
+
+                        <mat-list class="list">
+                          <mat-list role="list">
+                            <br />
+                            <mat-list-item role="listitem" *ngFor="let item of accomadationsList">{{ item[0]}}
+                            </mat-list-item>
+                            <div class="split right">
+                              <div class="form-btn">
+                                <button class="btn" [routerLink]="['/galary2']">
+                                  Add More
+                                </button>
+                              </div>
+                            </div>
+                          </mat-list>
+                        </mat-list>
+                      </div>
+                    </div>
+
+                    <div class="col-sm"></div>
+                  </div>
+
+                  <div class="form-btn">
+                    <button class="submit-btn" type="submit">
+                      Conform Booking
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        
-        <div class="col-md-6 col-md-pull-10">
-        <div class="booking-form">
-        <form>
-        
-        <div class="row no-margin">
-        <div class="col-sm-6">
-        <div class="form-group">
-        <span class="form-label">Check In</span>
-        <input class="form-control" type="date" required>
-        </div>
-        <span class="in-out hidden-xs">&#8652;</span>
-        </div>
-        <div class="col-sm-6">
-        <div class="form-group">
-        <span class="form-label">Check out</span>
-        <input class="form-control" type="date" required>
-        </div>
-        </div>
-        <div class="col-sm-12">
-        <div class="form-group">
-        <div class="form-label"><h5>Your Destinations List :</h5></div>
-        
-        <mat-list class="list">
-        <mat-list role="list">
-                <br>
-        <mat-list-item role="listitem" *ngFor="let item of destinationList" >{{item}}</mat-list-item>
-        <div class="split right">
-        <div class="form-btn">
-        <button class="btn" [routerLink]="['/gallery']">Add More </button>
-        </div> 
-        </div>
-        </mat-list>
-        </mat-list>
-        </div>
-        </div>
-        <div class="col-sm-12">
-        <div class="form-group">
-        <span class="form-label"><h5>Your Accomadations List : </h5></span>
-        
-       <mat-list class="list">
-        <mat-list role="list">
-                <br>
-        <mat-list-item role="listitem" *ngFor="let item of accomadationsList" >{{item}}</mat-list-item>
-        <div class="split right">
-        <div class="form-btn">
-        <button class="btn" [routerLink]="['/galary2']">Add More </button>
-        </div> 
-        </div>
-        
-        </mat-list>
-        </mat-list>
-        </div>
-        </div>
-        <div class="col-sm-12">
-        <div class="form-group">
-        <span class="form-label"><h5>Booked safari List : </h5></span>
-       
-        <mat-list class="list">
-        <mat-list role="list">
-                <br>
-        <mat-list-item role="listitem" *ngFor="let item of list" >{{item}}</mat-list-item>
-        <div class="form-btn">
-        <button class="btn" [routerLink]="['/galary1']">Add More</button>
-        </div>
-        </mat-list>
-        </mat-list>
-        </div>
-        </div>
-        <div class="col-sm">
-        
-        </div>
-        </div>
-        
-        <div class="form-btn">
-        <button class="submit-btn" [routerLink]="['/accomadationplane']">See your Plan</button>
-        </div>
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <div>
-        </div>
-                <agm-map [latitude]="lat" [longitude]="lng">
-                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                <agm-direction [origin]="origin" [destination]="destination"  [waypoints]="waypoints" [travelMode]="'DRIVING'">
-                </agm-direction>
-                </agm-map>  
-                <!-- <agm-map [latitude]="lat" [longitude]="lng">
-                <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
-                </agm-map> -->
-        </div>
-</body>        
+      </div>
+    </div>
+    <div></div>
+
+
+  </div>
+  <app-map></app-map>
+</body>

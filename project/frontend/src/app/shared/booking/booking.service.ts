@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingService {
-  public dastinations: string[]=[];
-  public accomedations:string[]=[];
+  public dastinations: string[] = [];
+  public accomedations: string[][] = [];
+
+  constructor(private http: HttpClient) { }
+
 
   addDestionation(id:string){
     if(!this.dastinations.includes(id)){
@@ -13,12 +19,22 @@ export class BookingService {
     }
 
   }
+  setdata(data: any) {
+    console.log(data);
+
+    this.http.post(environment.apiBaseUrl + '/book/pkg', data).subscribe(result => {
+      console.log(result);
+
+    });
+  }
+
+
   getDestinaions(){
     return this.dastinations;
   }
-  addAcoomedations(id:string){
-    if(!this.accomedations.includes(id)){
-      this.accomedations.push(id);
+  addAcoomedations(hoBooking:any){
+    if(!this.accomedations.includes(hoBooking.id)){
+      this.accomedations.push(hoBooking);
     }
 
   }
@@ -26,5 +42,4 @@ export class BookingService {
     return this.accomedations;
   }
 
-  constructor() { }
 }
