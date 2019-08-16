@@ -39,6 +39,8 @@ app.use('/book',require('./modelsControlersAndServices/booking/booking.controlle
 
 app.use('/image',require('./modelsControlersAndServices/image/image.controller'));
 
+app.use('/accomadation',require('./modelsControlersAndServices/accomadation/accomadation.controller'));
+
 // global error handler
 app.use(errorHandler);
 

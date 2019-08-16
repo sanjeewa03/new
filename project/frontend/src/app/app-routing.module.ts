@@ -134,7 +134,7 @@ const routes: Routes = [
 
   { path: "image/:id",component:ImageDetailComponent
 },
-  { path: "forms/:id/:acc/:pax/:checkin/:checkout",component:AvailabilityComponent
+  { path: "forms/:id/:acc/:pax/:checkin/:checkout/:l1/:l2",component:AvailabilityComponent
 },
   {path: "customizedform",component:CustomizedformComponent
 },
@@ -150,7 +150,7 @@ const routes: Routes = [
 },
 { path: "Hotelimage/:id",component:Image2Component
 },
-{ path: "userroles",component:UserrolesComponent 
+{ path: "userroles",component:UserrolesComponent
 },
 ];
 

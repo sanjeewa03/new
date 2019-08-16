@@ -9,6 +9,7 @@ import { environment } from '../../../environments/environment';
 export class BookingService {
   public dastinations: string[] = [];
   public accomedations: string[][] = [];
+  public des: number[][] = [];
 
   constructor(private http: HttpClient) { }
 

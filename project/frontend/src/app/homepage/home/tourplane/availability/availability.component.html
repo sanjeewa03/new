@@ -97,5 +97,10 @@
 
 
   </div>
-  <app-map></app-map>
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+    <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+    <agm-marker *ngFor="let item of des" [latitude]="item.l1" [longitude]="item.l2" ></agm-marker>
+</agm-map>
+
 </body>

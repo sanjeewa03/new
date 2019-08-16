@@ -482,3 +482,6 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
       column-count: 5;
   }
 }
+agm-map {
+  height: 300px;
+}

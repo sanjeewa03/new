@@ -13,41 +13,43 @@
                     <div style="padding-top:30px" class="panel-body" >
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form #addHotelForm="ngForm" (ngSubmit)="addHotelForm.valid && onSubmit(addHotelForm)">
-                                    
-                                    
-                                <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                                        <input id="username" type="uname"  [(ngModel)]="hotelService.selectedHotel.username" class="form-control" name="username" value="" placeholder="Category of Accomadations">                                        
+                        <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+                            <div class="form-row">
+                              <div class="col form-group">
+                                  <label>Category of Accomadation</label>
+                                  <input type="username" #category="ngModel" [(ngModel)]="accomadationService.selectedAccomadation.category"  name="category" class="form-control" placeholder=""
+                                  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !username.valid }">
+                                  <div *ngIf="signUpForm.submitted && !category.valid">
+                                     <label class="validation-message">This field is required.</label>
+                                  </div>
+                              </div>
+                            </div> <br>
+  
+                            <div class="form-row">
+                              <div class="col form-group">
+                                <label>Accomadation Title </label>
+                                  <input type="text"  #title="ngModel" [(ngModel)]="accomadationService.selectedAccomadation.title" name="title" class="form-control" placeholder=""
+                                  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && ! title.valid }">
+                                  <div *ngIf="signUpForm.submitted && !firstName.valid">
+                                    <label class="validation-message">This field is required.</label>
+                                  </div>
+                                </div>
+                             
+                            </div><br>
+  
+                            <div class="form-row">
+                                <div class="col form-group">
+                                  <label>Accomadation Caption </label>
+                                    <input type="text"  #caption="ngModel" [(ngModel)]="accomadationService.selectedAccomadation.caption" name="caption" class="form-control" placeholder=""
+                                    required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !caption.valid }">
+                                    <div *ngIf="signUpForm.submitted && !firstName.valid">
+                                      <label class="validation-message">This field is required.</label>
                                     </div>
-                                        
-                                    <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="hotelName" type="name" [(ngModel)]="hotelService.selectedHotel.hotelName" class="form-control" name="hotelName" placeholder="Header">
-                                    </div>
-                                    <div style="margin-bottom: 25px" class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                            <input id="hotelName" type="name" [(ngModel)]="hotelService.selectedHotel.hotelName" class="form-control" name="hotelName" placeholder="Title">
-                                        </div>
-        
-                                    <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-book" aria-hidden="true"></i></span>
-                                        <input id="hoteladdress" type="add"  [(ngModel)]="hotelService.selectedHotel.hoteladdress" class="form-control" name="hoteladdress" value="" placeholder="Address">                                        
-                                    </div>
-        
-                                    <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                        <input id="hotelWeb" type="web" [(ngModel)]="hotelService.selectedHotel.hotelWeb" class="form-control" name="hotelWeb" value="" placeholder="Review">                                        
-                                    </div>
-        
-                                   
-                                     <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-file"></i></span>
-                                        <input id="category" type="type"  [(ngModel)]="hotelService.selectedHotel.category" class="form-control" name="category" value="" placeholder="Price">                                        
-                                    </div> 
-        
-                                    
-                           
+                                  </div>
+                               
+                                </div>
+  
+                            <br>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <div class="input-group-prepend">
                                   
@@ -59,15 +61,14 @@
                                 </div>
                               </div>
 
-                  
-                            
-                            <div style="margin-top:10px" class="form-group">
-                                <!-- Button -->
-                                    <div class="col-sm-12 controls">
-                                        <input type="submit"  class="btn btn-primary btn-block" value="Submit">
-                                    </div>
-                            </div>
-                        </form>     
+  
+                              
+                              
+                              <div class="form-group">
+                                  <input type="submit" class="btn btn-primary btn-block" value="Submit">
+                              </div>
+                               <p><small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our  Terms of use and Privacy Policy.</small> </p>
+                          </form> 
                 </div>                     
             </div>  
         </div>

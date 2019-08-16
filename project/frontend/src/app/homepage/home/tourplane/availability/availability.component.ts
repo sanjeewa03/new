@@ -10,9 +10,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./availability.component.css']
 })
 export class AvailabilityComponent implements OnInit {
+  lat: number = 7.180167;
+  lng: number = 79.883146;
   public destinationList: string[];
   public accomadationsList: string[][];
   public list:string[]=[];
+  public des:number[][];
   checkin: Date;
   checkout: Date;
   id: any;
@@ -27,11 +30,18 @@ export class AvailabilityComponent implements OnInit {
 
 
    updateDestination(){
+     const destination=[
+     +this.route.snapshot.params['id'],
+      +this.route.snapshot.params['l1'],
+      +this.route.snapshot.params['l2'],
 
+    ];
+      this.bookingService.des.push(destination);
      this.bookingService.addDestionation(this.route.snapshot.params['id']);
      this.destinationList=this.bookingService.dastinations;
      this.accomadationsList=this.bookingService.accomedations;
-     console.log(this.destinationList);
+     this.des=this.bookingService.des;
+     console.log(this.des);
    }
    updateAccomedation(){
     const hoBooking=[
@@ -47,7 +57,8 @@ export class AvailabilityComponent implements OnInit {
 
     this.accomadationsList=this.bookingService.accomedations;
     this.destinationList=this.bookingService.dastinations;
-    console.log(this.accomadationsList);
+    this.des=this.bookingService.des;
+    console.log(this.des);
   }
   ngOnInit() {
    /* this.accomadationsList.forEach(element => {

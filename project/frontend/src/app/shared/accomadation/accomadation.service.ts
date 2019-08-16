@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AccomadationService {
 
-  selectedPlace: Accomadation = {
+  selectedAccomadation: Accomadation = {
     id:0,
     category:"",
     header:"",
@@ -27,13 +27,13 @@ export class AccomadationService {
     
   };
   constructor(private http: HttpClient ) { }
-  addPlace(place: Accomadation){
-    console.log("add place service func");
-    console.log(place.id);
-    return this.http.post(environment.apiBaseUrl + '/place/addplace', place);
+  addAccomadation(accomadation: Accomadation){
+    console.log("add accomadation service func");
+    console.log(accomadation.title);
+    return this.http.post(environment.apiBaseUrl + '/accomadation/addaccomadation', accomadation);
   }
   getAll():Observable<dataInterface[]>{
     console.log("getAll place service func");
-    return this.http.get<dataInterface[]>(environment.apiBaseUrl + '/place/getall');
+    return this.http.get<dataInterface[]>(environment.apiBaseUrl + '/accomadation/getall');
   }
 }
